@@ -3,4 +3,5 @@
 3. As a user, when I choose ***offer a ride***, I want to be able to enter my information, path, ride cost, times, and contact information. Then, I want to be added the the app drivers. // DONE
 4. As a user, I want to be able to view all rides and drivers available in my region. //DONE
 5. As a user, I want to be able to view other people ratings of the website. Also, I want to be able to add my own rating score.
-6. As a user, I want to be able to know more about the owners of the website. 
+6. As a user, I want to be able to display my activity (requests+offers);
+7. As a user, I want to be able to know more about the owners of the website. 

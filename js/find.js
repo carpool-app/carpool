@@ -1,10 +1,11 @@
-
 'use strict';
 
 let matchedOffers = [];
 const findForm = document.getElementById('findForm');
 findForm.addEventListener('submit', handleFindSubmit);
-let existingLocalStorage = '';
+let existingRequestLocalStorage = '';
+let existingOffers = '';
+
 
 render();
 function render() {
@@ -12,12 +13,13 @@ function render() {
 }
 
 function getFromLocalStorage() {
-  existingLocalStorage = JSON.parse(localStorage.getItem('RideRequests')) || [];
+  existingRequestLocalStorage = JSON.parse(localStorage.getItem('RideRequests')) || [];
+  existingOffers = JSON.parse(localStorage.getItem('RideOffers')) || [];
 }
 
 function saveToLocalStorage(request) {
-  existingLocalStorage.push(request);
-  localStorage.setItem('RideRequests', JSON.stringify(existingLocalStorage));
+  existingRequestLocalStorage.push(request);
+  localStorage.setItem('RideRequests', JSON.stringify(existingRequestLocalStorage));
 }
 function handleFindSubmit(event) {
   event.preventDefault();
@@ -42,13 +44,19 @@ function matchRequestToOffer(request) {
       console.log('yay!');
     }
   }
+  for (let i = 0; i < existingOffers.length; i++) {
+    if (request.from === existingOffers[i].from && request.to === existingOffers[i].to && request.day === existingOffers[i].day && request.time === existingOffers[i].time && request.payment === existingOffers[i].payment && (request.driverGender === existingOffers[i].gender || request.driverGender === 'None')) {
+      matchedOffers.push(existingOffers[i]);
+      console.log('yay*2!');
+    }
+  }
 }
 function clearFindForm() {
   findForm.textContent = '';
 }
 
 function showOffers() {
-  const OffersInfo = ['Name', 'From', 'To', 'Day', 'Time', 'Payment Method', 'Cost', 'Phone', 'Email', 'Route Start', 'Route End'];
+  const OffersInfo = ['Image', 'Name', 'From', 'To', 'Day', 'Time', 'Payment Method', 'Cost', 'Phone', 'Email', 'Starting Point', 'Ending Point'];
   let sectionEl = document.getElementById('findFormSection');
   let tableEl = document.createElement('table');
   sectionEl.appendChild(tableEl);
@@ -62,6 +70,12 @@ function showOffers() {
   for (let i = 0; i < matchedOffers.length; i++) {
     let trEl = document.createElement('tr');
     tableEl.appendChild(trEl);
+    let tdELImg = document.createElement('td');
+    trEl.appendChild(tdELImg);
+    let imgEl = document.createElement('img');
+    tdELImg.appendChild(imgEl);
+    imgEl.src = matchedOffers[i].path;
+    imgEl.onerror = imgError(imgEl);
     let tdEl1 = document.createElement('td');
     trEl.appendChild(tdEl1);
     tdEl1.textContent = matchedOffers[i].name;
@@ -93,15 +107,21 @@ function showOffers() {
     tdEl10.textContent = matchedOffers[i].email;
     let tdEl11 = document.createElement('td');
     trEl.appendChild(tdEl11);
-    tdEl11.textContent = matchedOffers[i].fromLocation;
+    tdEl11.innerHTML = matchedOffers[i].fromLocation;
     let tdEl12 = document.createElement('td');
     trEl.appendChild(tdEl12);
-    tdEl12.textContent = matchedOffers[i].toLocation;
+    tdEl12.innerHTML = matchedOffers[i].toLocation;
   }
   let buttonEl = document.createElement('button');
   aEl.appendChild(buttonEl);
   buttonEl.id = 'findAgain';
   buttonEl.textContent = 'Find Another Ride';
   aEl.href = 'find.html';
+}
+
+function imgError(image) {
+  image.onerror = '';
+  image.src = 'img/default.jpg';
+  return true;
 }
 

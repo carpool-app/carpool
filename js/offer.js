@@ -29,8 +29,6 @@ function handleOfferSubmit(event) {
   let cost = event.target.cost.value;
   let phone = event.target.phone.value;
   let email = event.target.email.value;
-  //let fromLocation = event.target.fromLocation.value;
-  //let toLocation = event.target.toLocation.value;
   let offer = new RideOffer(name, from, to, day, time, payment, gender, cost, phone, email);
   saveToLocalStorage(offer);
   offerForm.style.display = 'none';

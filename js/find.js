@@ -46,6 +46,7 @@ function matchRequestToOffer(request) {
   }
   for (let i = 0; i < existingOffers.length; i++) {
     if (request.from === existingOffers[i].from && request.to === existingOffers[i].to && request.day === existingOffers[i].day && request.time === existingOffers[i].time && request.payment === existingOffers[i].payment && (request.driverGender === existingOffers[i].gender || request.driverGender === 'None')) {
+      existingOffers[i].path = 'img/default.jpg';
       matchedOffers.push(existingOffers[i]);
       console.log('yay*2!');
     }

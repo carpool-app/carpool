@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Carpool | Home</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header>
+        <section>
+            <img src="" alt="Logo" id="logo">
+            <h1>Carpool</h1>
+        </section>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Activity</a></li>
+                    <li><a href="">Ratings</a></li>
+                    <li><a href="">About Us</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <section id="findFormSection">
+            <form id="findForm">
+                <legend>Find a Ride</legend>
+                <fieldset>
+                    <p>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" placeholder="Name" required>
+                    </p>
+                    <p>
+                        <label for="from">From:</label>
+                        <select name="from" id="from" form="findForm" required>
+                            <option value="Amman">Amman</option>
+                            <option value="Zarqa">Zarqa</option>
+                            <option value="Irbid">Irbid</option>
+                            <option value="Salt">Salt</option>
+                            <option value="Madaba">Madaba</option>
+                            <option value="Ajloun">Ajloun</option>
+                            <option value="Mafraq">Mafraq</option>
+                            <option value="Jarash">Jarash</option>
+                            <option value="Maan">Ma'an</option>
+                            <option value="Aqaba">Aqaba</option>
+                            <option value="Karak">Karak</option>
+                            <option value="Tafila">Tafila</option>
+                        </select>
+                        <label for="to">To:</label>
+                        <select name="to" id="to" form="findForm" required>
+                            <option value="Amman">Amman</option>
+                            <option value="Zarqa">Zarqa</option>
+                            <option value="Irbid">Irbid</option>
+                            <option value="Salt">Salt</option>
+                            <option value="Madaba">Madaba</option>
+                            <option value="Ajloun">Ajloun</option>
+                            <option value="Mafraq">Mafraq</option>
+                            <option value="Jarash">Jarash</option>
+                            <option value="Maan">Ma'an</option>
+                            <option value="Aqaba">Aqaba</option>
+                            <option value="Karak">Karak</option>
+                            <option value="Tafila">Tafila</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label>Choose a time for your ride</label>
+                        <select name="Day" id="day" form="findForm" required>
+                            <option value="Sunday">Sunday</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                        </select>
+                        <input type="time" id="time" required>
+                    </p>
+                    <p>
+                        <label>Payment Method:</label>
+                        <select name="payment" id='payment' form="findForm" required>
+                            <option value="Cash">Cash</option>
+                            <option value="Credit">Credit Card</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label>Driver:</label>
+                        <select name="driverGender" id='driverGender' form="findForm" required>
+                            <option value="None">Not specified</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </p>
+                </fieldset>
+                <button type="submit" id="find">Find</button>
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <p>Copy Rights Reserved &copy; Carpool 2020</p>
+        <ul>
+            <li class="nbar"><a href="index.html"><img src=""></a></li>
+            <li class="nbar"><a href="index.html"><img src=""></a></li>
+            <li class="nbar"><a href="index.html"><img src=""></a></li>
+            <li class="nbar"><a href="index.html"><img src=""></a></li>
+            <li class="nbar"><a href="index.html"><img src=""></a></li>
+            <li class="nbar"><a href="index.html"><img src=""></a></li>
+            <li class="nbar"><a href="index.html"><img src=""></a></li>
+            <li class="nbar"><a href="index.html"><img src=""></a></li>
+        </ul>
+    </footer>
+    <script src="js/app.js"></script>
+    <script src="js/find.js"></script>
+</body>
+
+</html>

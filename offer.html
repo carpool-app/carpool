@@ -26,12 +26,20 @@
     </header>
     <main>
         <section id="offerFormSection">
+
             <form id="offerForm">
                 <legend>Offer a Ride</legend>
                 <fieldset>
                     <p>
                         <label for="name">Name:</label>
                         <input type="text" id="name" placeholder="Name" required>
+                    </p>
+                    <p>
+                        <label>Gender:</label>
+                        <select name="gender" id='gender' form="offerForm" required>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
                     </p>
                     <p>
                         <label for="from">From:</label>
@@ -79,7 +87,7 @@
                     </p>
                     <p>
                         <label for="cost">Cost:</label>
-                        <input type="text" id="cost" placeholder="Cost">
+                        <input type="text" id="cost" placeholder="JD" required>
                     </p>
                     <p>
                         <label>Accepted Payment Method:</label>
@@ -89,18 +97,18 @@
                         </select>
                     </p>
                     <p>
-                        <label>Passenger:</label>
-                        <select name="gender" id='gender' form="offerForm" required>
-                            <option value="None">Not specified</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                        </select>
+                        <label for="phone">Phone Number:</label>
+                        <input type="number" id="phone" placeholder="00962772121010" required>
                     </p>
-
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="example@gmail.com" required>
+                    </p>
                 </fieldset>
                 <button type="submit" id="offer">Offer</button>
             </form>
         </section>
+        <section id="anotherOffer"></section>
 
     </main>
     <footer>

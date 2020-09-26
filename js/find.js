@@ -4,7 +4,21 @@
 let matchedOffers = [];
 const findForm = document.getElementById('findForm');
 findForm.addEventListener('submit', handleFindSubmit);
+let existingLocalStorage = '';
 
+render();
+function render() {
+  getFromLocalStorage();
+}
+
+function getFromLocalStorage() {
+  existingLocalStorage = JSON.parse(localStorage.getItem('RideRequests')) || [];
+}
+
+function saveToLocalStorage(request) {
+  existingLocalStorage.push(request);
+  localStorage.setItem('RideRequests', JSON.stringify(existingLocalStorage));
+}
 function handleFindSubmit(event) {
   event.preventDefault();
   let name = event.target.name.value;
@@ -15,7 +29,7 @@ function handleFindSubmit(event) {
   let payment = event.target.payment.value;
   let driverGender = event.target.driverGender.value;
   let request = new RideRequest(name, from, to, day, time, payment, driverGender);
-  request.saveToLocalStorage();
+  saveToLocalStorage(request);
   matchRequestToOffer(request);
   clearFindForm();
   showOffers();
@@ -29,21 +43,23 @@ function matchRequestToOffer(request) {
     }
   }
 }
-function clearFindForm(){
+function clearFindForm() {
   findForm.textContent = '';
 }
-function showOffers(){
-  const OffersInfo = ['Name', 'From', 'To', 'Day', 'Time', 'Payment Method', 'Cost'];
+
+function showOffers() {
+  const OffersInfo = ['Name', 'From', 'To', 'Day', 'Time', 'Payment Method', 'Cost', 'Phone', 'Email', 'Route Start', 'Route End'];
   let sectionEl = document.getElementById('findFormSection');
   let tableEl = document.createElement('table');
   sectionEl.appendChild(tableEl);
-  for (let i=0;i<OffersInfo.length;i++){
+  let aEl = document.createElement('a');
+  sectionEl.appendChild(aEl);
+  for (let i = 0; i < OffersInfo.length; i++) {
     let thEl = document.createElement('th');
     tableEl.appendChild(thEl);
     thEl.textContent = OffersInfo[i];
   }
-  // add things *******
-  for (let i = 0; i<matchedOffers.length;i++){
+  for (let i = 0; i < matchedOffers.length; i++) {
     let trEl = document.createElement('tr');
     tableEl.appendChild(trEl);
     let tdEl1 = document.createElement('td');
@@ -65,6 +81,27 @@ function showOffers(){
     trEl.appendChild(tdEl6);
     let tdEl7 = document.createElement('td');
     trEl.appendChild(tdEl7);
-    tdEl7.textContent = matchedOffers[i].cost;
+    tdEl7.textContent = matchedOffers[i].payment;
+    let tdEl8 = document.createElement('td');
+    trEl.appendChild(tdEl8);
+    tdEl8.textContent = matchedOffers[i].cost;
+    let tdEl9 = document.createElement('td');
+    trEl.appendChild(tdEl9);
+    tdEl9.textContent = matchedOffers[i].phone;
+    let tdEl10 = document.createElement('td');
+    trEl.appendChild(tdEl10);
+    tdEl10.textContent = matchedOffers[i].email;
+    let tdEl11 = document.createElement('td');
+    trEl.appendChild(tdEl11);
+    tdEl11.textContent = matchedOffers[i].fromLocation;
+    let tdEl12 = document.createElement('td');
+    trEl.appendChild(tdEl12);
+    tdEl12.textContent = matchedOffers[i].toLocation;
   }
+  let buttonEl = document.createElement('button');
+  aEl.appendChild(buttonEl);
+  buttonEl.id = 'findAgain';
+  buttonEl.textContent = 'Find Another Ride';
+  aEl.href = 'find.html';
 }
+

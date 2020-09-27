@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body{
+    margin: 0;
+    background-color: #000000;
+}
+
 header{
     background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
@@ -64,6 +69,9 @@ header nav ul li a {
     text-transform: uppercase;
     font-size: 15px;
 }
+main{
+    background-color: #ffffff;
+}
 
 #hero {
     margin-top: 50px;
@@ -110,20 +118,31 @@ header nav ul li a {
 footer{
     position: absolute;
     margin-bottom: 0px;
-    background-color: white;
+    background-color: #000000;
     width: 100%;
-}
-footer p{
-    float: left;
 }
 footer ul{
     list-style: none;
+    padding-left: 10px;
+
 }
 footer ul li{
     display: inline;
     
 }
 footer ul li a img{
-    width: 40px;
-    float: right;
+    width: 35px;
+    float: left;
+    padding-right: 10px;
 }
+
+footer p{
+    float: right;
+    font-family: 'Raleway', sans-serif; 
+    color: white;
+    margin-bottom: 10px;
+    font-size: 12px;
+    padding-right: 10px;
+    padding-top: 0px;
+}
+

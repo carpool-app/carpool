@@ -1,122 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 header{
-height: 100%;  
-background-image: url('../img/carbool.png');
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-padding: 10px;
-background-attachment: fixed;
-box-shadow: 50px  black;
-border-radius: 50px;
-}
-#bg{
-     height: 600px;
-     width: 100%;
-     background-position: center;
-     background-size: cover;
-     background-repeat: no-repeat;
-
-}
-header P{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 80px;
-    font-weight: bold;
-    color: black;
-    float: left;
-    padding-left: 10px;
-    text-align: left;
-    margin-top: 10px;
-
-}
-header P span{
-    display: inline-flex;
-	height: 60px;
-	width: 60px;
-	/* border: 2.5px solid #FF1EAD; */
-	border: 10px solid rgb(255, 255, 255);
-	border-radius: 90px;
-	box-shadow:
-		0 0 2px rgba(0, 0, 0, .75),
-		inset 0 0 2px rgba(0, 0, 0, .45);
-
-}
-
-#header-line {
-    background-color: rgba(0, 0, 0, 0.795);
-
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 100px;
-    border-radius: 50px;
-    border-width: 100%px;
-    position: -ms-page;
-    box-shadow: 20 20 black;}
-
-header h1 {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 20px;
-    text-align: center;
-    padding-top: 10px;
-    float: left;
-    color: cadetblue;
-    display: inline;
+    
 }
 
-nav {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    float: right;
-    margin-top: 20px;
-    margin-right: 20px;
-    font-size: 20px;
-    color:  rgb(255, 255, 255);
-}
-
-nav ul {
-    list-style: none;
-    margin-right: 10px;
-}
-
-nav ul li {
-    display: inline;
-    padding: 10px;
-}
-
-a:hover{
-  color: rgb(78, 204, 187);
-  text-shadow: 1px 1px 15px rgb(167, 245, 238);
-}
-
-/**//**//**/
-body{
+#logo{
 	justify-content: center;
 	align-items: center;
 	font-family: 'Quicksand', sans-serif;
-    font-size: 42px;
-    background-color: rgb(0, 0, 0);
+    font-size: 20px;
+    color: white;
+    float: left;
 }
 
 span{
 	margin: 0 15px;
 	line-height: .7;
 	text-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
-	animation: span 3s ease-in infinite alternate;
+    animation: span 3s ease-in infinite alternate;
 }
-.main{
-	display: flex;
-	justify-content: center;
-    align-items: flex-start;
-    position: relative;
-    bottom: 400px;
-}
+
 .letter{
 	display: inline-flex;
-	height: 60px;
-	width: 60px;
+	height: 20px;
+	width: 20px;
 	/* border: 2.5px solid #FF1EAD; */
-	border: 10px solid rgb(255, 255, 255);
+	border: 5px solid rgb(255, 255, 255);
 	border-radius: 90px;
 	box-shadow:
 		0 0 2px rgba(0, 0, 0, .75),
@@ -127,64 +44,34 @@ span{
 
 @keyframes letter {
 	0%,20%{ width: 27px; }
-	60%,100%{ width: 30vw; }
+	60%,100%{ width: 15vw; }
 }
 
-
-#find img{
-    width: 400px;
-   border-radius: 900px;
-   border: double rgb(19, 138, 132);
-   border-width: 10px;
-   margin: 50px;
-   left: 200px;
-   padding: 20px;
-   margin-left: 60px;
-
-}
-
-#driver img{
-    width: 400px;
-    padding: 20px;
-    margin-right: 60px;
-    border-radius: 900px;
-    border: double rgb(19, 138, 132);
-    border-width: 10px;
-    left: 900px;
-    
-}
-
-#find {
-    background-color: rgb(220, 220, 220);
-    border-radius: 500px;
-}
-#driver{
-    background-color: rgb(220, 220, 220);
-    border-radius: 500px;
-}
-
-footer{
-    position: absolute;
-    margin-bottom: 0px;
-    background-color: white;
-    width: 100%;
-}
-footer p{
-    float: left;
-}
-footer ul{
-    list-style: none;
-}
-footer ul li{
-    display: inline;
-    
-}
-footer ul li a img{
-    width: 40px;
+header nav{
     float: right;
+    padding: 0 30px;
+    padding-top: 3px;
+    color: #ffffff;
+}
+header nav ul li {
+    display: inline-block;
+    padding: 0 10px;
+	font-family: 'Quicksand', sans-serif;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 15px;
 }
 
-
+#hero {
+    margin-top: 50px;
+    background-image: url('../img/carbool.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+  }
 
 
 

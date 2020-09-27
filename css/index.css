@@ -21,6 +21,29 @@ border-radius: 50px;
      background-repeat: no-repeat;
 
 }
+header P{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    color: black;
+    float: left;
+    padding-left: 10px;
+    text-align: left;
+    margin-top: 10px;
+
+}
+header P span{
+    display: inline-flex;
+	height: 60px;
+	width: 60px;
+	/* border: 2.5px solid #FF1EAD; */
+	border: 10px solid rgb(255, 255, 255);
+	border-radius: 90px;
+	box-shadow:
+		0 0 2px rgba(0, 0, 0, .75),
+		inset 0 0 2px rgba(0, 0, 0, .45);
+
+}
 
 #header-line {
     background-color: rgba(0, 0, 0, 0.795);
@@ -109,11 +132,10 @@ span{
 
 
 #find img{
-    width: 300px;
+    width: 400px;
    border-radius: 900px;
    border: double rgb(19, 138, 132);
    border-width: 10px;
-   display: inline;
    margin: 50px;
    left: 200px;
    padding: 20px;
@@ -122,9 +144,9 @@ span{
 }
 
 #driver img{
+    width: 400px;
     padding: 20px;
     margin-right: 60px;
-    display: inline;
     border-radius: 900px;
     border: double rgb(19, 138, 132);
     border-width: 10px;
@@ -142,11 +164,12 @@ span{
 }
 
 footer{
-  
+    position: absolute;
+    margin-bottom: 0px;
     background-color: white;
+    width: 100%;
 }
 footer p{
-    display: inline;
     float: left;
 }
 footer ul{
@@ -159,9 +182,6 @@ footer ul li{
 footer ul li a img{
     width: 40px;
     float: right;
-}
-#navfoot{
-    background-color: white;
 }
 
 

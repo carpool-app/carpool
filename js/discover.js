@@ -7,7 +7,6 @@ let existingOfferLocalStorage = '';
 const OffersInfo = ['Image', 'Name', 'From', 'To', 'Day', 'Time', 'Payment Method', 'Cost', 'Phone', 'Email', 'Starting Point', 'Ending Point'];
 
 
-render();
 function render() {
   getFromLocalStorage();
   showDiscover();
@@ -80,3 +79,5 @@ function setDefaultImg(offers){
   }
   return (offers);
 }
+
+render();

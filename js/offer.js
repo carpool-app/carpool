@@ -4,7 +4,6 @@ const offerForm = document.getElementById('offerForm');
 offerForm.addEventListener('submit', handleOfferSubmit);
 let existingLocalStorage = '';
 
-render();
 function render() {
   getFromLocalStorage();
 }
@@ -53,4 +52,6 @@ function createButton(){
   buttonEl.textContent = 'Offer Another Ride';
   aEl.href = 'offer.html';
 }
+
+render();
 

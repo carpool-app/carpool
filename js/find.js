@@ -118,11 +118,13 @@ function showOffers() {
   aEl.href = 'find.html';
 }
 
-function setDefaultImg(offers){
-  for (let i= 0; i<offers.length;i++){
-    offers[i].path = 'img/default.jpg';
+function setDefaultImg(offers) {
+  if (offers) {
+    for (let i = 0; i < offers.length; i++) {
+      offers[i].path = 'img/default.jpg';
+    }
+    return (offers);
   }
-  return (offers);
 }
 
 render();

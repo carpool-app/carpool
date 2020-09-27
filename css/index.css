@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 * {
+    
     box-sizing: border-box;
 }
 
@@ -71,11 +72,12 @@ header nav ul li a {
     background-repeat: no-repeat;
     background-size: cover;
     height: 700px;
+    background-attachment: fixed;
   }
 
 
 
-  #find img{
+  /* #find img{
     width: 400px;
    border-radius: 900px;
    border: double rgb(19, 138, 132);
@@ -96,16 +98,16 @@ header nav ul li a {
     border-width: 10px;
     left: 900px;
     
-}
+} */
 
-#find {
+/* #find {
     background-color: rgb(220, 220, 220);
     border-radius: 500px;
 }
 #offer{
     background-color: rgb(220, 220, 220);
     border-radius: 500px;
-}
+} */
 
 footer{
     position: absolute;
@@ -127,3 +129,99 @@ footer ul li a img{
     width: 40px;
     float: right;
 }
+
+#discoverButton{
+position: relative;
+left: 950px;
+top:500px;
+padding:30px;
+color: gray;
+background:F0F8FF;
+letter-spacing: .1em;
+
+font-size: 25px;
+}
+
+#discoverButton :hover{
+    background: #1C6EA4; 
+
+}
+
+#disoverButton :active{
+    background: #144E75; 
+
+}
+
+#findRide{
+    border: 2px double #1C6EA4; 
+    background-color: rgba(128, 128, 128, 0.281);
+    /* border-radius: 5%; */
+    width: 80%;
+    background-position: center;
+    margin-left: 210px;
+    margin-top: 100px;
+    font-family: Impact, Charcoal, sans-serif;
+font-size: 30px;
+letter-spacing: 4.4px;
+word-spacing: 6px;
+color: #000000;
+font-weight: 400;
+text-decoration: none;
+font-style: italic;
+font-variant: normal;
+text-transform: uppercase;
+
+
+}
+
+#offerRide{
+    border: 2px double #1C6EA4;
+    background-color:rgba(255, 192, 203, 0.445);
+    /* border-radius: 5%; */
+    width: 80%;
+    background-position: center;
+    margin-left: 210px;
+    margin-top: 100px;
+    font-family: Impact, Charcoal, sans-serif;
+font-size: 30px;
+letter-spacing: 4.4px;
+word-spacing: 6px;
+color: #000000;
+font-weight: 400;
+text-decoration: none;
+font-style: italic;
+font-variant: normal;
+text-transform: uppercase;
+line-height: ;
+}
+
+ #findRide img{
+    width: 400px;
+   border-radius: 900px;
+   border: double rgb(19, 138, 132);
+   border-width: 10px;
+   margin: 50px;
+   left: 200px;
+   padding: 20px;
+   margin-left: 60px;
+
+ }
+ #offerRide img{
+    width: 400px;
+    border-radius: 900px;
+    border: double rgb(19, 138, 132);
+    border-width: 10px;
+    margin: 50px;
+    left: 200px;
+    padding: 20px;
+    margin-left: 60px;
+    position: relative;
+    left:1100px
+
+ }
+
+ body{
+    overflow-x:hidden;
+
+
+ }

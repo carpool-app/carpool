@@ -48,9 +48,6 @@ var RideOffer = function (name, from, to, day, time, payment, gender, cost, phon
 };
 RideOffer.all = [];
 
-RideOffer.prototype.saveToLocalStorage = function () {
-  localStorage.setItem('offers', JSON.stringify(this));
-};
 
 function generateOffers() {
   new RideOffer('Faris', 'Amman', 'Zarqa', 'Sunday', '00:00', 'Cash', 'Male', '2Jd', '+962-805-555-9931', 'Faris@gmail.com');

@@ -14,7 +14,7 @@ function render() {
 
 function getFromLocalStorage() {
   existingRequestLocalStorage = JSON.parse(localStorage.getItem('RideRequests')) || [];
-  existingOffers = JSON.parse(localStorage.getItem('RideOffers')) || [];
+  existingOffers = setDefaultImg(JSON.parse(localStorage.getItem('RideOffers'))) || [];
 }
 
 function saveToLocalStorage(request) {
@@ -76,7 +76,6 @@ function showOffers() {
     let imgEl = document.createElement('img');
     tdELImg.appendChild(imgEl);
     imgEl.src = matchedOffers[i].path;
-    imgEl.onerror = imgError(imgEl);
     let tdEl1 = document.createElement('td');
     trEl.appendChild(tdEl1);
     tdEl1.textContent = matchedOffers[i].name;
@@ -120,9 +119,9 @@ function showOffers() {
   aEl.href = 'find.html';
 }
 
-function imgError(image) {
-  image.onerror = '';
-  image.src = 'img/default.jpg';
-  return true;
+function setDefaultImg(offers){
+  for (let i= 0; i<offers.length;i++){
+    offers[i].path = 'img/default.jpg';
+  }
+  return (offers);
 }
-

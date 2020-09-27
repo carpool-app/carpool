@@ -1,214 +1,170 @@
-*{
+* {
     box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
 }
+
 header{
-    /* background-color:rgba(255,255,255,0); */
-    background-color: black;
-    color: white;
+height: 100%;  
+background-image: url('../img/carbool.png');
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+padding: 10px;
+background-attachment: fixed;
+box-shadow: 50px  black;
+border-radius: 50px;
+}
+#bg{
+     height: 600px;
+     width: 100%;
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+
+}
+
+#header-line {
+    background-color: rgba(0, 0, 0, 0.795);
+
     width: 100%;
-    height: 500px;
-    background-image: url('../img/ridesharing.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  background-size: 100%;
-  /* filter: blur(7px); */
-  opacity: 0.8;
-    /* z-index: 5;
-    margin-top: -1px; */
-    /* position: fixed; */
-  
-}
-/* .elementor-sticky--active {
-    background-color: rgba(0, 0, 0, 0.70);
-   } */
-#logo{
-    width: 150px;
-    padding-left: 30px;
-    padding-top: 20px;
-    float: left;
-}
-h1{
- position: relative;   
- top:30px;
- font-size: 3pc;
- left: 30px;
- /* font-family: 'Kalam', cursive; */
-}
-nav{
-    float: right;
-    list-style: none;
-    margin-right:30px ;
-    position: fixed;
-    top:0px;
-    left:350px;
-    text-align: center;
-    transition: .5s;
-}
-nav ul li{
-    display: inline-block;
+    height: 100px;
+    border-radius: 50px;
+    border-width: 100%px;
+    position: -ms-page;
+    box-shadow: 20 20 black;}
+
+header h1 {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 20px;
-    font-family: 'Kalam', cursive;
-    cursor: pointer;
-    padding: 10px 50px;
-    border-radius: 10px;
-    transition: .5s;
+    text-align: center;
+    padding-top: 10px;
+    float: left;
+    color: cadetblue;
+    display: inline;
 }
-nav ul li:hover{
-    background: #9daca6;
 
+nav {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    color:  rgb(255, 255, 255);
 }
-nav ul li a{
-    text-decoration: none;
-    color: black;
+
+nav ul {
+    list-style: none;
+    margin-right: 10px;
+}
+
+nav ul li {
+    display: inline;
     padding: 10px;
 }
-main #welcome{
-    height: 350px;
-    /* border: solid black 2px; */
-   position: relative; 
-   top:80px;
-   
+
+a:hover{
+  color: rgb(78, 204, 187);
+  text-shadow: 1px 1px 15px rgb(167, 245, 238);
 }
-main{
-    text-align: center;
-    padding-bottom: 200px;
-    /* margin: -117px; */
-}
-main .main{
-    font-size: 4pc;
-    text-align: center;
-    position: relative;
-    bottom: 580px;
-    font-family: 'Kalam', cursive;
-     /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */
-     display: flex;
-     justify-content: center;
-     align-items: flex-start;
-}
+
+/**//**//**/
 body{
-    overflow-x:hidden;
-    background-color: wh;
-    /* background-color:black; */
-    background-image: url('../img/pic05.jpg');
-    background-size: cover;
-
-}
-#findRide{
-    background-image:url('../img/find\ a\ ride\ 2.jpeg') ;
-    background-size: 400px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    float: left;
-    border: solid black 2px;
-    width: 450px;
-    height: 230px;
-   margin-left:17%;
-   margin-right: 100px;
-   border-radius: 10%;
-   font-size: 2.5pc;
-   line-height: 5;
-   font-weight: bold;
-   color: white;
-   text-shadow:  2px 2px 4px #000000;
-   transition: .5s ease;
-}
-#findRide:hover{
-box-shadow: 0 0 0 6px #000000;
-transition: .5s ease;
-}
-#offerRide{
-    background-image:url('../img/offer\ a\ ride.jpg') ;
-    background-size: 400px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    float: left;
-    float: left;
-    border: solid black 2px;
-    width: 450px;
-    height: 230px;
-    border-radius: 10%;
-    font-size: 2.5pc;
-    line-height: 5;
-    font-weight: bold;
-    color: white;
-    text-shadow:   2px 2px 4px #000000;
-    transition: .5s ease;
-}
-#offerRide:hover{
-    box-shadow: 0 0 0 6px #000000;
-    transition: .5s ease;
-    }
-footer{
-    clear: both;
-    margin-top: 200px;
-    background-color: black;
-    color: white;
-    border: solid black 2px;
-    height: 50px;
-    line-height: 3;
-}
-footer p{
-float: left;
-margin-left: 15px;
-}
-footer ul{
-float:right;
-position: relative;
-top:3px;
-}
-.nbar a img{
-    clear: both;
-    width: 40px;
-}
-footer ul li{
-    display: inline-block;
-}
-/* #try{
-    margin: 0;
-    padding: 0;
-} */
-button{
-    position: relative;
-    bottom: 550px;
-    padding: 10px;
-    border-radius: 15%;
-}
-button:hover{
-    background-color: gray;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Quicksand', sans-serif;
+    font-size: 42px;
+    background-color: rgb(0, 0, 0);
 }
 
 span{
 	margin: 0 15px;
 	line-height: .7;
-	text-shadow: 0 0 2px rgba(0, 0, 0, .45);
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
 	animation: span 3s ease-in infinite alternate;
 }
 .main{
 	display: flex;
 	justify-content: center;
-	align-items: flex-start;
+    align-items: flex-start;
+    position: relative;
+    bottom: 400px;
 }
 .letter{
 	display: inline-flex;
-	height: 30px;
-	width: 27px;
+	height: 60px;
+	width: 60px;
 	/* border: 2.5px solid #FF1EAD; */
-	border: 2.35px solid black;
-	border-radius: 14px;
+	border: 10px solid rgb(255, 255, 255);
+	border-radius: 90px;
 	box-shadow:
 		0 0 2px rgba(0, 0, 0, .75),
 		inset 0 0 2px rgba(0, 0, 0, .45);
 
-	animation: letter 3s ease-in-out infinite alternate;
+	animation: letter 3s ease-in infinite alternate;
 }
-@keyframes span {
-	0%,30%{ margin: 0 15px; }
-	70%,100%{ margin: 0 5px; }
-}
+
 @keyframes letter {
-	0%,30%{ width: 27px; }
-	70%,100%{ width: 30vw; }
+	0%,20%{ width: 27px; }
+	60%,100%{ width: 30vw; }
 }
+
+
+#find img{
+    width: 300px;
+   border-radius: 900px;
+   border: double rgb(19, 138, 132);
+   border-width: 10px;
+   display: inline;
+   margin: 50px;
+   left: 200px;
+   padding: 20px;
+   margin-left: 60px;
+
+}
+
+#driver img{
+    padding: 20px;
+    margin-right: 60px;
+    display: inline;
+    border-radius: 900px;
+    border: double rgb(19, 138, 132);
+    border-width: 10px;
+    left: 900px;
+    
+}
+
+#find {
+    background-color: rgb(220, 220, 220);
+    border-radius: 500px;
+}
+#driver{
+    background-color: rgb(220, 220, 220);
+    border-radius: 500px;
+}
+
+footer{
+  
+    background-color: white;
+}
+footer p{
+    display: inline;
+    float: left;
+}
+footer ul{
+    list-style: none;
+}
+footer ul li{
+    display: inline;
+    
+}
+footer ul li a img{
+    width: 40px;
+    float: right;
+}
+#navfoot{
+    background-color: white;
+}
+
+
+
+
+

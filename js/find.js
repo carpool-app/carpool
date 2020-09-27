@@ -7,7 +7,6 @@ let existingRequestLocalStorage = '';
 let existingOffers = '';
 
 
-render();
 function render() {
   getFromLocalStorage();
 }
@@ -125,3 +124,5 @@ function setDefaultImg(offers){
   }
   return (offers);
 }
+
+render();

@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-image: url('../img/find\ form.jpg');
+    background-size: cover;
+}
+header{
+    /* background-color:rgba(255,255,255,0); */
+    color: white;
+    width: 100%;
+    height: 200px;
+  /* filter: blur(7px); */
+    /* z-index: 5;
+    margin-top: -1px; */
+    /* position: fixed; */
+  
+}
+nav{
+    float: right;
+    list-style: none;
+    margin-right:30px ;
+    position: fixed;
+    top:0px;
+    left:500px;
+    text-align: center;
+    transition: .5s;
+}
+nav ul li{
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Kalam', cursive;
+    cursor: pointer;
+    padding: 10px 50px;
+    border-radius: 10px;
+    transition: .5s;
+}
+nav ul li:hover{
+    background: #9daca6;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+footer{
+    clear: both;
+    margin-top: 600px;
+    background-color: black;
+    color: white;
+    border: solid black 2px;
+    height: 50px;
+}
+footer p{
+float: left;
+margin-left: 15px;
+}
+footer ul{
+float:right;
+position: relative;
+top:3px;
+}
+.nbar a img{
+    clear: both;
+    width: 40px;
+}
+footer ul li{
+    display: inline-block;
+}
+#findFormSection{
+border: solid black 2px;
+text-align: center;
+height: 500px;
+background-size: cover;
+margin: auto;
+width: 60%;
+background-color: rgba(255, 255, 255, 0.726);
+border-radius: 50%;
+}
+#findForm{
+    margin-top: 90px;
+    font-size: 2pc;
+}
+legend{
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+input{
+    width: 200px;
+    height: 30px;
+}
+select{
+    width: 200px;
+    height: 30px;
+}
+button{
+    padding: 20px 30px;
+    margin-top: 15px;
+    background-color: rgba(153, 205, 50, 0.712);
+    border-radius: 50%;
+    border-color: rgba(153, 205, 50, 0.712);
+}

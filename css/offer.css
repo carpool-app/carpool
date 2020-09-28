@@ -32,7 +32,7 @@ input[type=text], [type=number] , [type=email],[type=time], select {
 
   
   button:hover {
-    background-color: #2ead98;
+    background-color: #000000;
   }
   
   #offerFormSection {
@@ -43,7 +43,7 @@ input[type=text], [type=number] , [type=email],[type=time], select {
   }
 
   input:invalid {
-    border: 2px solid #8A8578;
+    border: 2px solid #ddd;
   }
   input:valid {
     border: 2px solid #5DA38B;
@@ -121,4 +121,9 @@ input[type=text], [type=number] , [type=email],[type=time], select {
     }
   fieldset{
     box-shadow: 5px 5px 70px #49bee2;
+    }
+
+
+    #offerAgain{
+
     }

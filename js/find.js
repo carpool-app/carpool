@@ -53,6 +53,8 @@ function matchRequestToOffer(request) {
 }
 function clearFindForm() {
   findForm.textContent = '';
+  let mainEl = document.getElementsByTagName('main')[0];
+  mainEl.style.backgroundImage = url(../img/map.png);
 }
 
 function showOffers() {

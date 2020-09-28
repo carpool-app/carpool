@@ -2,8 +2,10 @@
 
 let requestsSectionEl = document.getElementById('myRequests');
 let offersSectionEl = document.getElementById('myOffers');
-let tableEl = document.createElement('table');
-requestsSectionEl.appendChild(tableEl);
+let tableElRequests = document.createElement('table');
+let tableElOffers = document.createElement('table');
+requestsSectionEl.appendChild(tableElRequests);
+offersSectionEl.appendChild(tableElOffers);
 let myRequestsLocalStorage = '';
 let myOffersLocalStorage = '';
 let myRequestsHeader = ['Name', 'From', 'To', 'Day', 'Time', 'Payment Method', 'Preferred Driver'];
@@ -28,15 +30,15 @@ function saveToLocalStorage(name, array) {
 function renderMyRequests() {
   if (myRequestsLocalStorage.length) {
     let thElRemove = document.createElement('th');
-    tableEl.appendChild(thElRemove);
+    tableElRequests.appendChild(thElRemove);
     for (let i = 0; i < myRequestsHeader.length; i++) {
       let thEl = document.createElement('th');
-      tableEl.appendChild(thEl);
+      tableElRequests.appendChild(thEl);
       thEl.textContent = myRequestsHeader[i];
     }
     for (let i = 0; i < myRequestsLocalStorage.length; i++) {
       let trEl = document.createElement('tr');
-      tableEl.appendChild(trEl);
+      tableElRequests.appendChild(trEl);
       let tdElRemove = document.createElement('td');
       trEl.appendChild(tdElRemove);
       let imgElRemove = document.createElement('img');
@@ -78,19 +80,17 @@ function renderMyRequests() {
 }
 
 function renderMyOffers() {
-  if (myRequestsLocalStorage.length) {
-    let tableEl = document.createElement('table');
-    offersSectionEl.appendChild(tableEl);
+  if (myOffersLocalStorage.length) {
     let thElRemove = document.createElement('th');
-    tableEl.appendChild(thElRemove);
+    tableElOffers.appendChild(thElRemove);
     for (let i = 0; i < myOffersHeader.length; i++) {
       let thEl = document.createElement('th');
-      tableEl.appendChild(thEl);
+      tableElOffers.appendChild(thEl);
       thEl.textContent = myOffersHeader[i];
     }
     for (let i = 0; i < myOffersLocalStorage.length; i++) {
       let trEl = document.createElement('tr');
-      tableEl.appendChild(trEl);
+      tableElOffers.appendChild(trEl);
       let tdElRemove = document.createElement('td');
       trEl.appendChild(tdElRemove);
       let imgElRemove = document.createElement('img');

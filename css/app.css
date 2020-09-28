@@ -1,28 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
+nav {
+    overflow: hidden;
+  }
+  
+  nav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    background-color: rgb(19, 138, 132);
+    color: white;
+  }
 body{
     margin: 0;
-    background-color: #000000;
+    background-color: white;
 }
 
 header{
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255,255,255, 0.9);
     width: 100%;    
     position: fixed;
     top: 0;
-    padding-bottom: 50px;
+    padding-bottom: 15px;
 }
 
 #logo{
 	justify-content: center;
 	align-items: center;
-	font-family: 'Quicksand', sans-serif;
-    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
     color: white;
     float: left;
 }
@@ -57,33 +75,66 @@ header nav{
     float: right;
     padding: 0 30px;
     padding-top: 3px;
-    color: #ffffff;
+    color: #000000;
 }
 header nav ul li {
     display: inline-block;
     padding: 0 10px;
-	font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
 }
 header nav ul li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     text-transform: uppercase;
-    font-size: 15px;
+}
+header nav ul li a:hover {
+    color: white;
+ 
+}
+
+#logo{
+    display: inline;
+    color: black;
+    padding-left: 20px;
+    font-family: 'Covered By Your Grace', cursive;
+    margin-top: 25px;
+
+}
+
+header img{
+    float: left;
+    width: 80px;
+}
+
+h1{
+    display: inline;
+    font-size: 30px;
 }
 main{
-    background-color: #ffffff;
-    position: relative;
-    min-height: 100vh;
-   
+    background-color: #ffffff;  
 }
 footer{
     position: absolute;
-    margin-bottom: 0px;
-    background-color: #000000;
+    padding-top: 15px;
+    background-color: rgba(255,255,255, 0.9);
     width: 100%;
-    height: 1cm;
-
+    margin-bottom: 20px;
 }
+
+
+footer p{
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    font-size: 15px;
+    padding-right: 10px;
+    text-align: center;
+    padding-left: 700px;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+
 footer ul{
     list-style: none;
     padding-left: 10px;
@@ -95,16 +146,7 @@ footer ul li{
 }
 footer ul li a img{
     width: 35px;
-    float: left;
-    padding-right: 10px;
-}
-
-footer p{
     float: right;
-    font-family: 'Raleway', sans-serif; 
-    color: white;
-    margin-bottom: 10px;
-    font-size: 12px;
-    padding-right: 10px;
-    padding-top: 0px;
+    padding-right: 5px;
+    border-radius: 20px;
 }

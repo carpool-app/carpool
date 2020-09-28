@@ -2,12 +2,11 @@
     background-image: url('../img/carbool.png');
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 50px;
     font-size: 70px;
     height: 900px;
     color: #000000;
     text-align: center;
-	font-family: 'Quicksand', sans-serif;
+    font-family: 'Covered By Your Grace', cursive;
     padding-top: 300px;
     
   }
@@ -15,15 +14,15 @@
   button{
     border: none;
     border-radius: 70px;
-    background: #17AFA7;
+    background: #000000;
     padding: 8px 30px;
     color: #FFF;
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Raleway', sans-serif;
     font-size: 30px;
 }
 button:hover {
-    box-shadow: 0 0 2px 1px #4d0029;
-    background-color:  #000000;
+    box-shadow: 0 0 2px 1px rgb(19, 138, 132);
+    background-color:  rgb(19, 138, 132);
     color: #ffffff;
     transition-delay: 350ms;
   }

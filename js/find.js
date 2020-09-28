@@ -56,6 +56,7 @@ function clearFindForm() {
   let mainEl = document.getElementsByTagName('main')[0];
   console.log(mainEl);
   mainEl.style.backgroundImage = "url('../img/map.png')";
+  mainEl.style.paddingBottom = '500px';
 }
 
 function showOffers() {

@@ -1,8 +1,16 @@
 #myRequests{
-    margin-top: 50px;
+    margin-top: 200px;
+    float: left;
 }
-
+#myOffers{
+    margin-top: 200px;
+    float: right;
+}
 .trash{
     width: 30px;
     height: 30px;
+}
+
+main{
+    padding-bottom: 500px;
 }

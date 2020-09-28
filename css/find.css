@@ -34,6 +34,7 @@ main {
     /* margin-left: 500px; */
     position: relative;
     left:730px;
+    margin-left: -60px;
 }
 #findAgain:hover {
     box-shadow: 0 0 2px 1px #17AFA7;

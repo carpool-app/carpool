@@ -89,7 +89,7 @@ input[type=text], [type=number] , [type=email],[type=time], select {
   }
   #main-img{
       float: left;
-      padding-top: 150px;
+      padding-top: 280px;
       width: 800px;
       
   }
@@ -125,5 +125,30 @@ input[type=text], [type=number] , [type=email],[type=time], select {
 
 
     #offerAgain{
+      padding: 6px 20px;
+      border: none;
+      border-radius: 70px;
+      background: #000000;
+      color: #FFF;
+    font-family: 'Raleway', sans-serif;
+      font-size: 30px;
+      /* margin-left: 500px; */
+      position: relative;
+      width: 20%;
+      top: 50px;
+      left: 100px;
+    }
+
+    #offerAgain:hover{
+      background: #17AFA7;
+      box-shadow: 0 0 2px 1px rgb(19, 138, 132);
+      color: #ffffff;
+      transition-delay: 350ms;
+    }
+
+    #offerMessage{
+      font-family: 'Covered By Your Grace', cursive;
+      font-size: 50px;
+      padding-left: 100px;
 
     }

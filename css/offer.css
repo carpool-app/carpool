@@ -1,5 +1,5 @@
 #offerFormSection{
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 input[type=text], [type=number] , [type=email],[type=time], select {
@@ -25,7 +25,11 @@ input[type=text], [type=number] , [type=email],[type=time], select {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 30px;
+    border-radius: 70px ;
   }
+
   
   button:hover {
     background-color: #2ead98;
@@ -85,7 +89,7 @@ input[type=text], [type=number] , [type=email],[type=time], select {
   }
   #main-img{
       float: left;
-      padding-top: 250px;
+      padding-top: 150px;
       width: 800px;
       
   }
@@ -118,5 +122,3 @@ input[type=text], [type=number] , [type=email],[type=time], select {
   fieldset{
     box-shadow: 5px 5px 70px #49bee2;
     }
-
- 

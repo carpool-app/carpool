@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+
 #findFormSection{
     margin-top: 50px;
 }
@@ -59,3 +62,80 @@ td{
     transition-delay: 350ms;
   }
 
+  
+  #findResultsSection{
+      padding-top: 100px;
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 10px;
+  }
+  
+  .driverImage{
+      position: relative;
+      width: 50%;
+  }
+  
+  #findResultsSection img{
+      width: 300px;
+      height: 300px;
+      border-radius: 150px;
+      opacity: 0.7;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  #findResultsSection img:hover{
+      opacity: 1;
+  }
+  
+  
+  .overlayName{
+          background-color: #4CAF50;
+          color: white;
+          font-size: 16px;
+        }
+  
+  
+  table{
+      max-width: 100%;
+      margin-bottom: 10px;
+      margin-left: 25px;
+      background-color: rgba(255,255,255);
+    border-radius: 25px;
+    padding: 20px;
+    opacity: 0.8;
+    
+  
+  }
+  table, th, tr{
+      border: 1px solid black;
+      text-align: center;  
+        
+  }
+  td{
+      font-size: 15px;
+      width:400px;
+      background-color: rgba(255,255,255,.9);
+      opacity: .8;
+      height: 160px; 
+      font-family: "freight-display-pro", serif;
+      
+  }
+  
+  
+  table:first-of-type{
+      margin-top: 100px;
+  }
+  
+  h2{
+      font-family: 'Covered By Your Grace', cursive;
+      font-weight: bold;
+      font-size: 40px;
+  }
+  
+  .info{
+      font-family: 'Lora', serif;
+      font-size: 30px;
+  
+  
+  }

@@ -54,12 +54,12 @@ function matchRequestToOffer(request) {
 function clearFindForm() {
   findForm.textContent = '';
   let mainEl = document.getElementsByTagName('main')[0];
-  mainEl.style.backgroundImage = url(../img/map.png);
+  mainEl.style.backgroundImage = '../img/map.png';
 }
 
 function showOffers() {
   const OffersInfo = ['Image', 'Name', 'From', 'To', 'Day', 'Time', 'Payment Method', 'Cost', 'Phone', 'Email', 'Starting Point', 'Ending Point'];
-  let sectionEl = document.getElementById('findFormSection');
+  let sectionEl = document.getElementById('findResultsSection');
   for (let i = 0; i < matchedOffers.length; i++) {
     let tableEl = document.createElement('table');
     sectionEl.appendChild(tableEl);
@@ -68,6 +68,7 @@ function showOffers() {
     let tdElImg = document.createElement('img');
     trEl.appendChild(tdElImg);
     tdElImg.src = matchedOffers[i].path;
+    tdElImg.className = 'driverImage';
     let tdElInfo = document.createElement('td');
     trEl.appendChild(tdElInfo);
     tdElInfo.textContent = `${matchedOffers[i].name} is going from ${matchedOffers[i].from} to ${matchedOffers[i].to} on ${matchedOffers[i].day} at ${matchedOffers[i].time}.

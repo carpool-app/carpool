@@ -98,5 +98,12 @@ input[type=text], [type=number] , [type=email],[type=time], select {
   #offerForm{
       background-color: white;
   }
+  label{
+    font-family: 'Quicksand', sans-serif;
+    font-size: large;
+    }
+  fieldset{
+    box-shadow: 5px 5px 70px #49bee2;
+    }
 
  

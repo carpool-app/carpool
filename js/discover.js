@@ -1,8 +1,6 @@
 'use strict';
 
 let sectionEl = document.getElementById('discoverSection');
-let tableEl = document.createElement('table');
-sectionEl.appendChild(tableEl);
 let existingOfferLocalStorage = '';
 const OffersInfo = ['Image', 'Name', 'From', 'To', 'Day', 'Time', 'Payment Method', 'Cost', 'Phone', 'Email', 'Starting Point', 'Ending Point'];
 
@@ -23,6 +21,8 @@ function showDiscover() {
 
 function renderOfferRows(offers) {
   for (let i = 0; i < offers.length; i++) {
+    let tableEl = document.createElement('table');
+    sectionEl.appendChild(tableEl);
     let trEl = document.createElement('tr');
     tableEl.appendChild(trEl);
     let tdElImg = document.createElement('img');

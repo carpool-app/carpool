@@ -58,65 +58,34 @@ function clearFindForm() {
 function showOffers() {
   const OffersInfo = ['Image', 'Name', 'From', 'To', 'Day', 'Time', 'Payment Method', 'Cost', 'Phone', 'Email', 'Starting Point', 'Ending Point'];
   let sectionEl = document.getElementById('findFormSection');
-  let tableEl = document.createElement('table');
-  sectionEl.appendChild(tableEl);
-  let aEl = document.createElement('a');
-  sectionEl.appendChild(aEl);
-  for (let i = 0; i < OffersInfo.length; i++) {
-    let thEl = document.createElement('th');
-    tableEl.appendChild(thEl);
-    thEl.textContent = OffersInfo[i];
-  }
   for (let i = 0; i < matchedOffers.length; i++) {
+    let tableEl = document.createElement('table');
+    sectionEl.appendChild(tableEl);
     let trEl = document.createElement('tr');
     tableEl.appendChild(trEl);
-    let tdELImg = document.createElement('td');
-    trEl.appendChild(tdELImg);
-    let imgEl = document.createElement('img');
-    tdELImg.appendChild(imgEl);
-    imgEl.src = matchedOffers[i].path;
-    let tdEl1 = document.createElement('td');
-    trEl.appendChild(tdEl1);
-    tdEl1.textContent = matchedOffers[i].name;
-    let tdEl2 = document.createElement('td');
-    trEl.appendChild(tdEl2);
-    tdEl2.textContent = matchedOffers[i].from;
-    let tdEl3 = document.createElement('td');
-    trEl.appendChild(tdEl3);
-    tdEl3.textContent = matchedOffers[i].to;
-    let tdEl4 = document.createElement('td');
-    trEl.appendChild(tdEl4);
-    tdEl4.textContent = matchedOffers[i].day;
-    let tdEl5 = document.createElement('td');
-    trEl.appendChild(tdEl5);
-    tdEl5.textContent = matchedOffers[i].time;
-    let tdEl6 = document.createElement('td');
-    trEl.appendChild(tdEl6);
-    let tdEl7 = document.createElement('td');
-    trEl.appendChild(tdEl7);
-    tdEl7.textContent = matchedOffers[i].payment;
-    let tdEl8 = document.createElement('td');
-    trEl.appendChild(tdEl8);
-    tdEl8.textContent = matchedOffers[i].cost;
-    let tdEl9 = document.createElement('td');
-    trEl.appendChild(tdEl9);
-    tdEl9.textContent = matchedOffers[i].phone;
-    let tdEl10 = document.createElement('td');
-    trEl.appendChild(tdEl10);
-    tdEl10.textContent = matchedOffers[i].email;
-    let tdEl11 = document.createElement('td');
-    trEl.appendChild(tdEl11);
-    tdEl11.innerHTML = matchedOffers[i].fromLocation;
-    let tdEl12 = document.createElement('td');
-    trEl.appendChild(tdEl12);
-    tdEl12.innerHTML = matchedOffers[i].toLocation;
+    let tdElImg = document.createElement('img');
+    trEl.appendChild(tdElImg);
+    tdElImg.src = matchedOffers[i].path;
+    let tdElInfo = document.createElement('td');
+    trEl.appendChild(tdElInfo);
+    tdElInfo.textContent = `${matchedOffers[i].name} is going from ${matchedOffers[i].from} to ${matchedOffers[i].to} on ${matchedOffers[i].day} at ${matchedOffers[i].time}.
+      The ride with ${matchedOffers[i].name} costs ${matchedOffers[i].cost} and the accepted payment method is ${matchedOffers[i].payment} payment. Call at ${matchedOffers[i].phone} or contact ${matchedOffers[i].email}  `;
+    let tdElFromMap = document.createElement('td');
+    trEl.appendChild(tdElFromMap);
+    tdElFromMap.innerHTML = matchedOffers[i].fromLocation;
+    let tdElToMap = document.createElement('td');
+    trEl.appendChild(tdElToMap);
+    tdElToMap.innerHTML = matchedOffers[i].toLocation;
   }
+  let aEl = document.createElement('a');
+  sectionEl.appendChild(aEl);
   let buttonEl = document.createElement('button');
   aEl.appendChild(buttonEl);
   buttonEl.id = 'findAgain';
   buttonEl.textContent = 'Find Another Ride';
   aEl.href = 'find.html';
 }
+
 
 function setDefaultImg(offers) {
   if (offers) {

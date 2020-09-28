@@ -1,7 +1,7 @@
 #discoverSection{
     padding-top: 50px;
     margin-top: 50px;
-    width: 300px;
+    width: 500px;
 }
 #discoverSection p{
     display: inline;
@@ -11,8 +11,13 @@
     height: 300px;
 }
 
+table{
+    width: 100px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
 table, th, tr, td{
     border: 1px solid black;
-    text-align: center;
+    text-align: center;    
 }
 

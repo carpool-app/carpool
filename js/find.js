@@ -71,8 +71,8 @@ function showOffers() {
     tdElImg.className = 'driverImage';
     let tdElInfo = document.createElement('td');
     trEl.appendChild(tdElInfo);
-    tdElInfo.textContent = `${matchedOffers[i].name} is going from ${matchedOffers[i].from} to ${matchedOffers[i].to} on ${matchedOffers[i].day} at ${matchedOffers[i].time}.
-      The ride with ${matchedOffers[i].name} costs ${matchedOffers[i].cost} and the accepted payment method is ${matchedOffers[i].payment} payment. Call at ${matchedOffers[i].phone} or contact ${matchedOffers[i].email}  `;
+    tdElInfo.innerHTML = `<b>${matchedOffers[i].name}</b> is going from <b>${matchedOffers[i].from}</b> to <b>${matchedOffers[i].to}</b> on <b>${matchedOffers[i].day}</b> at <b>${matchedOffers[i].time}</b>.
+    The ride with <b>${matchedOffers[i].name}</b> costs <b>${matchedOffers[i].cost}</b> and the accepted payment method is <b>${matchedOffers[i].payment}</b> payment. Call at <b>${matchedOffers[i].phone}</b> or contact <b>${matchedOffers[i].email}</b>  `;
     let tdElFromMap = document.createElement('td');
     trEl.appendChild(tdElFromMap);
     tdElFromMap.innerHTML = matchedOffers[i].fromLocation;

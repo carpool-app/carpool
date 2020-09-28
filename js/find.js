@@ -54,12 +54,20 @@ function matchRequestToOffer(request) {
 function clearFindForm() {
   findForm.textContent = '';
   let mainEl = document.getElementsByTagName('main')[0];
-  mainEl.style.backgroundImage = '../img/map.png';
+  console.log(mainEl);
+  mainEl.style.backgroundImage = "url('../img/map.png')";
 }
 
 function showOffers() {
   const OffersInfo = ['Image', 'Name', 'From', 'To', 'Day', 'Time', 'Payment Method', 'Cost', 'Phone', 'Email', 'Starting Point', 'Ending Point'];
   let sectionEl = document.getElementById('findResultsSection');
+  let aEl = document.createElement('a');
+  sectionEl.appendChild(aEl);
+  let buttonEl = document.createElement('button');
+  aEl.appendChild(buttonEl);
+  buttonEl.id = 'findAgain';
+  buttonEl.textContent = 'Find Another Ride';
+  aEl.href = 'find.html';
   for (let i = 0; i < matchedOffers.length; i++) {
     let tableEl = document.createElement('table');
     sectionEl.appendChild(tableEl);
@@ -71,6 +79,7 @@ function showOffers() {
     tdElImg.className = 'driverImage';
     let tdElInfo = document.createElement('td');
     trEl.appendChild(tdElInfo);
+    tdElInfo.className = 'info';
     tdElInfo.innerHTML = `<b>${matchedOffers[i].name}</b> is going from <b>${matchedOffers[i].from}</b> to <b>${matchedOffers[i].to}</b> on <b>${matchedOffers[i].day}</b> at <b>${matchedOffers[i].time}</b>.
     The ride with <b>${matchedOffers[i].name}</b> costs <b>${matchedOffers[i].cost}</b> and the accepted payment method is <b>${matchedOffers[i].payment}</b> payment. Call at <b>${matchedOffers[i].phone}</b> or contact <b>${matchedOffers[i].email}</b>  `;
     let tdElFromMap = document.createElement('td');
@@ -80,13 +89,6 @@ function showOffers() {
     trEl.appendChild(tdElToMap);
     tdElToMap.innerHTML = matchedOffers[i].toLocation;
   }
-  let aEl = document.createElement('a');
-  sectionEl.appendChild(aEl);
-  let buttonEl = document.createElement('button');
-  aEl.appendChild(buttonEl);
-  buttonEl.id = 'findAgain';
-  buttonEl.textContent = 'Find Another Ride';
-  aEl.href = 'find.html';
 }
 
 

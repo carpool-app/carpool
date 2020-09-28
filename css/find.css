@@ -26,18 +26,18 @@ main {
 #findAgain{
     border: none;
     border-radius: 70px;
-    background: #17AFA7;
+    background: #000000;
     padding: 6px 20px;
     color: #FFF;
-	font-family: 'Quicksand', sans-serif;
-    font-size: 20px;
+	font-family: 'Raleway', sans-serif;
+    font-size: 30px;
     /* margin-left: 500px; */
     position: relative;
     left:730px;
 }
 #findAgain:hover {
-    box-shadow: 0 0 2px 1px #17AFA7;;
-    background-color:  #000000;
+    box-shadow: 0 0 2px 1px #17AFA7;
+    background-color:  #17AFA7;
     color: #ffffff;
     transition-delay: 350ms;
   }

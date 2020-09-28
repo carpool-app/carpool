@@ -103,7 +103,10 @@ input[type=text], [type=number] , [type=email],[type=time], select {
     font-size: large;
     }
   fieldset{
-    box-shadow: 5px 5px 70px #49bee2;
+    box-shadow: 5px 5px 30px #49bee2;
+    }
+    footer p{
+      text-align: center;
     }
 
  

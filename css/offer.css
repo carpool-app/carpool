@@ -1,3 +1,102 @@
 #offerFormSection{
     margin-top: 50px;
 }
+
+input[type=text], [type=number] , [type=email],[type=time], select {
+    width:25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: -10px;
+    border-radius: 50px;
+    
+  }
+  
+  button {
+    width:100%;
+    background-color: #17AFA7;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2ead98;
+  }
+  
+  #offerFormSection {
+    FONT-WEIGHT: 700; 
+    width: 600px;
+    margin-left: 860px;
+    padding: 20px;
+  }
+
+  input:invalid {
+    border: 2px solid #8A8578;
+  }
+  input:valid {
+    border: 2px solid #5DA38B;
+  }
+  input:focus:invalid {
+    box-shadow: none;
+  }
+
+
+  #name{
+    width: 100%;
+  }
+
+  #time{
+    margin-left: 80px;
+     width: 100;
+  }
+  #day{
+    margin-left: 80px;
+  }
+
+  #cost{
+      width: 20%;
+  }
+  #accept{
+    margin-left: 50%;
+  }
+  #To{
+    margin-left: 30px;
+
+  }
+  #accept{
+      margin-left: 10px;
+  }
+  #main-img{
+      float: left;
+      padding-top: 250px;
+      width: 800px;
+      
+  }
+  #gender{
+      width: 100%;
+  }
+  #from{
+      width: 30%;
+      margin-left: 15px;
+  }
+  #to{
+      width: 30%;
+      margin-left: 15px;
+  }
+
+  main{
+      background-color: white;
+  }
+  #offerForm{
+      background-color: white;
+  }
+
+ 

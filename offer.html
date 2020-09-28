@@ -30,17 +30,16 @@
         </nav>
     </header>
     <main>
+        <img id="main-img" src="img/driver5.jpg" alt="">
         <section id="offerFormSection">
 
             <form id="offerForm">
-                <legend>Offer a Ride</legend>
+                
                 <fieldset>
                     <p>
-                        <label for="name">Name:</label>
+                        <p><label for="name">Name:</label></p>
                         <input type="text" id="name" placeholder="Name" required>
-                    </p>
-                    <p>
-                        <label>Gender:</label>
+                        <p><label>Gender:</label></p>
                         <select name="gender" id='gender' form="offerForm" required>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
@@ -62,7 +61,7 @@
                             <option value="Karak">Karak</option>
                             <option value="Tafila">Tafila</option>
                         </select>
-                        <label for="to">To:</label>
+                        <label for="to" id="To">To:</label>
                         <select name="to" id="to" form="offerForm" required>
                             <option value="Amman">Amman</option>
                             <option value="Zarqa">Zarqa</option>
@@ -79,7 +78,7 @@
                         </select>
                     </p>
                     <p>
-                        <label>Choose a time for your ride</label>
+                       <p><label>Choose a time for your ride</label></p> 
                         <select name="Day" id="day" form="offerForm" required>
                             <option value="Sunday">Sunday</option>
                             <option value="Monday">Monday</option>
@@ -91,26 +90,24 @@
                         <input type="time" id="time" required>
                     </p>
                     <p>
-                        <label for="cost">Cost:</label>
+                        <p><label for="cost">Cost:</label></p>
                         <input type="text" id="cost" placeholder="JD" required>
-                    </p>
-                    <p>
-                        <label>Accepted Payment Method:</label>
+                        <label id="accept">Accepted Payment Method:</label>
                         <select name="payment" id='payment' form="offerForm" required>
                             <option value="Cash">Cash</option>
                             <option value="Credit">Credit Card</option>
                         </select>
                     </p>
+                       
+                    
                     <p>
-                        <label for="phone">Phone Number:</label>
+                       <p> <label for="phone">Phone Number:</label></p>
                         <input type="number" id="phone" placeholder="00962772121010" required>
-                    </p>
-                    <p>
-                        <label for="email">Email:</label>
+                       <p> <label for="email">Email:</label></p>
                         <input type="email" id="email" placeholder="example@gmail.com" required>
                     </p>
+                    <button type="submit" id="offer">Offer</button>
                 </fieldset>
-                <button type="submit" id="offer">Offer</button>
             </form>
         </section>
         <section id="anotherOffer"></section>

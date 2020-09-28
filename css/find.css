@@ -2,27 +2,105 @@
 
 
 #findFormSection{
-    margin-top: 50px;
+    margin-top: 150px;
+    FONT-WEIGHT: 700; 
+    width: 600px;
+    margin-left: 860px;
+    padding: 20px;
+    
 }
-*{
+input[type=text],[type=time], select {
+    width:25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     box-sizing: border-box;
-}
-main {
-    background-image: url('../img/carbool.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-#findFormSection{
-    padding-top: 50px;
-    margin-top: 50px;
-    width: 500px;
-}
-#findFormSection img{
-    width: 200px;
-    height: 300px;
-}
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: -10px;
+    border-radius: 50px;
+  }
 
+#find{
+    width:80%;
+    background-color: #17AFA7;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 30px;
+    border-radius: 70px ;
+    position: relative;
+    bottom: 100px;
+    left: 50px;
+}
+#find:hover {
+    background-color: #000000;
+  }
+  input:invalid {
+    border: 2px solid #ddd;
+  }
+  input:valid {
+    border: 2px solid #5DA38B;
+  }
+  input:focus:invalid {
+    box-shadow: none;
+  }
+  #name{
+    width: 75%;
+  }
+  #time{
+    margin-left: 3px;
+     width: 80;
+  }
+  #day{
+    margin-left: 10px;
+    width: 60;
+  }
+  #main-img{
+      float: left;
+      width: 800px;
+      
+  }
+  #gender{
+      width: 100%;
+  }
+
+  #payment{
+    width: 28.5%;
+  }
+  #from{
+      width: 30%;
+      margin-left: 15px;
+  }
+  #to{
+      width: 30.5%;
+      margin-left: 15px;
+  }
+  
+main {
+    background-color: white;
+}
+#findForm{
+    background-color: white;
+    
+
+}
+label{
+    font-family: 'Quicksand', sans-serif;
+    font-size: large;
+    margin-left: 10px;
+    }
+  fieldset{
+    box-shadow: 5px 5px 70px #49bee2;
+    box-sizing: padding-box;
+    padding: 40px 10px;
+    padding-bottom: 100px;
+    }
 #findAgain{
     border: none;
     border-radius: 70px;
@@ -31,9 +109,9 @@ main {
     color: #FFF;
 	font-family: 'Raleway', sans-serif;
     font-size: 30px;
-    /* margin-left: 500px; */
     position: relative;
     left:730px;
+   
 }
 #findAgain:hover {
     box-shadow: 0 0 2px 1px #17AFA7;
@@ -41,21 +119,19 @@ main {
     color: #ffffff;
     transition-delay: 350ms;
   }
-
-  
-  #findResultsSection{
+#findResultsSection{
       padding-top: 100px;
       width: 100%;
       padding-left: 30px;
       padding-right: 10px;
   }
   
-  .driverImage{
+.driverImage{
       position: relative;
       width: 50%;
   }
   
-  #findResultsSection img{
+#findResultsSection img{
       width: 300px;
       height: 300px;
       border-radius: 150px;
@@ -64,19 +140,19 @@ main {
     backface-visibility: hidden;
   }
   
-  #findResultsSection img:hover{
+#findResultsSection img:hover{
       opacity: 1;
   }
   
   
-  .overlayName{
+.overlayName{
           background-color: #4CAF50;
           color: white;
           font-size: 16px;
         }
   
   
-  table{
+table{
       max-width: 100%;
       margin-bottom: 10px;
       margin-left: 25px;
@@ -87,12 +163,12 @@ main {
     
   
   }
-  table, th, tr{
+table, th, tr{
       border: 1px solid black;
       text-align: center;  
         
   }
-  td{
+td{
       font-size: 15px;
       width:400px;
       background-color: rgba(255,255,255,.9);
@@ -103,11 +179,11 @@ main {
   }
   
   
-  table:first-of-type{
+table:first-of-type{
       margin-top: 100px;
   }
   
-  h2{
+ h2{
       font-family: 'Covered By Your Grace', cursive;
       font-weight: bold;
       font-size: 40px;
@@ -117,5 +193,6 @@ main {
       font-family: 'Lora', serif;
       font-size: 30px;
   
-  
   }
+  
+ 

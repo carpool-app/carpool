@@ -40,6 +40,7 @@ function confirmMessage() {
   let pEl = document.createElement('p');
   sectionEl.appendChild(pEl);
   pEl.textContent = 'Ride Offer Added Successfully!';
+  pEl.id = 'offerMessage';
 }
 
 function createButton(){

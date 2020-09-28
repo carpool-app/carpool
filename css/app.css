@@ -12,9 +12,9 @@ body{
 
 header{
     background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;    
     position: fixed;
     top: 0;
-    width: 100%;    
 }
 
 #logo{

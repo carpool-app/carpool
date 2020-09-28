@@ -1,3 +1,18 @@
 #discoverSection{
+    padding-top: 50px;
     margin-top: 50px;
+    width: 300px;
 }
+#discoverSection p{
+    display: inline;
+}
+#discoverSection img{
+    width: 200px;
+    height: 300px;
+}
+
+table, th, tr, td{
+    border: 1px solid black;
+    text-align: center;
+}
+

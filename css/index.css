@@ -1,11 +1,33 @@
-
 #hero {
-    margin-top: 50px;
     background-image: url('../img/carbool.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 700px;
+    margin-top: 50px;
+    font-size: 70px;
+    height: 900px;
+    color: #000000;
+    text-align: center;
+	font-family: 'Quicksand', sans-serif;
+    padding-top: 300px;
+    
   }
+
+  button{
+    border: none;
+    border-radius: 70px;
+    background: #4d0029;
+    padding: 8px 30px;
+    color: #FFF;
+	font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+}
+button:hover {
+    box-shadow: 0 0 2px 1px #4d0029;
+    background-color:  #000000;
+    color: #ffffff;
+    transition-delay: 350ms;
+  }
+
 
 
 

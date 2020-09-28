@@ -117,6 +117,11 @@ main {
   .info{
       font-family: 'Lora', serif;
       font-size: 30px;
-  
-  
+  }
+
+  #opsMessage{
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 200px;
   }

@@ -69,26 +69,34 @@ function showOffers() {
   buttonEl.id = 'findAgain';
   buttonEl.textContent = 'Find Another Ride';
   aEl.href = 'find.html';
-  for (let i = 0; i < matchedOffers.length; i++) {
-    let tableEl = document.createElement('table');
-    sectionEl.appendChild(tableEl);
-    let trEl = document.createElement('tr');
-    tableEl.appendChild(trEl);
-    let tdElImg = document.createElement('img');
-    trEl.appendChild(tdElImg);
-    tdElImg.src = matchedOffers[i].path;
-    tdElImg.className = 'driverImage';
-    let tdElInfo = document.createElement('td');
-    trEl.appendChild(tdElInfo);
-    tdElInfo.className = 'info';
-    tdElInfo.innerHTML = `<b>${matchedOffers[i].name}</b> is going from <b>${matchedOffers[i].from}</b> to <b>${matchedOffers[i].to}</b> on <b>${matchedOffers[i].day}</b> at <b>${matchedOffers[i].time}</b>.
+  if (matchedOffers.length && matchedOffers !== []) {
+    for (let i = 0; i < matchedOffers.length; i++) {
+      let tableEl = document.createElement('table');
+      sectionEl.appendChild(tableEl);
+      let trEl = document.createElement('tr');
+      tableEl.appendChild(trEl);
+      let tdElImg = document.createElement('img');
+      trEl.appendChild(tdElImg);
+      tdElImg.src = matchedOffers[i].path;
+      tdElImg.className = 'driverImage';
+      let tdElInfo = document.createElement('td');
+      trEl.appendChild(tdElInfo);
+      tdElInfo.className = 'info';
+      tdElInfo.innerHTML = `<b>${matchedOffers[i].name}</b> is going from <b>${matchedOffers[i].from}</b> to <b>${matchedOffers[i].to}</b> on <b>${matchedOffers[i].day}</b> at <b>${matchedOffers[i].time}</b>.
     The ride with <b>${matchedOffers[i].name}</b> costs <b>${matchedOffers[i].cost}</b> and the accepted payment method is <b>${matchedOffers[i].payment}</b> payment. Call at <b>${matchedOffers[i].phone}</b> or contact <b>${matchedOffers[i].email}</b>  `;
-    let tdElFromMap = document.createElement('td');
-    trEl.appendChild(tdElFromMap);
-    tdElFromMap.innerHTML = matchedOffers[i].fromLocation;
-    let tdElToMap = document.createElement('td');
-    trEl.appendChild(tdElToMap);
-    tdElToMap.innerHTML = matchedOffers[i].toLocation;
+      let tdElFromMap = document.createElement('td');
+      trEl.appendChild(tdElFromMap);
+      tdElFromMap.innerHTML = matchedOffers[i].fromLocation;
+      let tdElToMap = document.createElement('td');
+      trEl.appendChild(tdElToMap);
+      tdElToMap.innerHTML = matchedOffers[i].toLocation;
+    }
+  }
+  else {
+    let pEl = document.createElement('p');
+    sectionEl.appendChild(pEl);
+    pEl.id = 'opsMessage';
+    pEl.textContent = 'Ops! No rides available in your region';
   }
 }
 

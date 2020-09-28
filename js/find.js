@@ -90,7 +90,7 @@ function showOffers() {
 function setDefaultImg(offers) {
   if (offers) {
     for (let i = 0; i < offers.length; i++) {
-      offers[i].path = 'img/default.jpg';
+      offers[i].path = 'img/default.png';
     }
     return (offers);
   }

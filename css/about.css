@@ -8,31 +8,58 @@
 
 
 
-/* 
-body{
-    overflow-x:hidden;
-    
-  background: url("../img/vid.mp4") center center no-repeat;
+main{
+  background-image: url("../img/3-scene_4.gif");
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  font-size: font-size;
-  font-family: font-face;
-  color: font-color;
+  background-repeat: no-repeat;
+  height: 1000px;
+}
 
 
- } */
-
-
-
-
-  #myVideo {
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+   font-family: 'Covered By Your Grace', cursive;
+   font-weight: bold;
+   font-size: 40px;
+   color: grey;
   }
   
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.column img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 150px;
+    margin-left: 80px;
+    border:rgba(128, 128, 128, 0.418) solid;
+  }
+
+  .row::after{
+    margin-top: 100px;
+  }
+
+  .column1 img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 150px;
+    margin-left: 650px;
+    border:rgba(128, 128, 128, 0.418) solid;
+   
+  }
+.column1{
+  font-family: 'Covered By Your Grace', cursive;
+  font-weight: bold;
+  font-size: 40px;
+  color: grey;
+
+}
+   

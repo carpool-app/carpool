@@ -114,7 +114,7 @@ footer p{
     font-size: 15px;
     padding-right: 10px;
     text-align: center;
-    padding-left: 700px;
+    padding-left: 500px;
     padding-top: 10px;
 }
 
@@ -132,4 +132,12 @@ footer ul li a img{
     float: right;
     padding-right: 5px;
     border-radius: 20px;
+}
+
+#footerLogo{
+    float: left;
+    color: black;
+    padding-left: 20px;
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 30px;
 }

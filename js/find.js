@@ -53,8 +53,8 @@ function matchRequestToOffer(request) {
 }
 function clearFindForm() {
   findForm.textContent = '';
-  let imgEl=document.getElementById('main-img');
-  imgEl.src='';
+  let imgEl = document.getElementById('main-img');
+  imgEl.src = '';
   let mainEl = document.getElementsByTagName('main')[0];
   console.log(mainEl);
   mainEl.style.backgroundImage = "url('../img/map.png')";
@@ -64,34 +64,32 @@ function clearFindForm() {
 function showOffers() {
   const OffersInfo = ['Image', 'Name', 'From', 'To', 'Day', 'Time', 'Payment Method', 'Cost', 'Phone', 'Email', 'Starting Point', 'Ending Point'];
   let sectionEl = document.getElementById('findResultsSection');
-  let aEl = document.createElement('a');
-  sectionEl.appendChild(aEl);
-  let buttonEl = document.createElement('button');
-  aEl.appendChild(buttonEl);
-  buttonEl.id = 'findAgain';
-  buttonEl.textContent = 'Find Another Ride';
-  aEl.href = 'find.html';
   if (matchedOffers.length && matchedOffers !== []) {
     for (let i = 0; i < matchedOffers.length; i++) {
       let tableEl = document.createElement('table');
       sectionEl.appendChild(tableEl);
-      let trEl = document.createElement('tr');
-      tableEl.appendChild(trEl);
+      let legendEl = document.createElement('legend');
+      tableEl.appendChild(legendEl);
+      legendEl.innerHTML = `<h2>${matchedOffers[i].name}</h2>`;
+      let trEl1 = document.createElement('tr');
+      tableEl.appendChild(trEl1);
       let tdElImg = document.createElement('img');
-      trEl.appendChild(tdElImg);
+      trEl1.appendChild(tdElImg);
       tdElImg.src = matchedOffers[i].path;
       tdElImg.className = 'driverImage';
       let tdElInfo = document.createElement('td');
-      trEl.appendChild(tdElInfo);
+      trEl1.appendChild(tdElInfo);
       tdElInfo.className = 'info';
       tdElInfo.innerHTML = `<b>${matchedOffers[i].name}</b> is going from <b>${matchedOffers[i].from}</b> to <b>${matchedOffers[i].to}</b> on <b>${matchedOffers[i].day}</b> at <b>${matchedOffers[i].time}</b>.
-    The ride with <b>${matchedOffers[i].name}</b> costs <b>${matchedOffers[i].cost}</b> and the accepted payment method is <b>${matchedOffers[i].payment}</b> payment. Call at <b>${matchedOffers[i].phone}</b> or contact <b>${matchedOffers[i].email}</b>  `;
+    <br>The ride with <b>${matchedOffers[i].name}</b> costs <b>${matchedOffers[i].cost}</b> and the accepted payment method is <b>${matchedOffers[i].payment}</b> payment. Call at <b>${matchedOffers[i].phone}</b> or contact <b>${matchedOffers[i].email}</b>  `;
+      let trEl2 = document.createElement('tr');
+      tableEl.appendChild(trEl2);
       let tdElFromMap = document.createElement('td');
-      trEl.appendChild(tdElFromMap);
-      tdElFromMap.innerHTML = matchedOffers[i].fromLocation;
+      trEl2.appendChild(tdElFromMap);
+      tdElFromMap.textContent = '';
       let tdElToMap = document.createElement('td');
-      trEl.appendChild(tdElToMap);
-      tdElToMap.innerHTML = matchedOffers[i].toLocation;
+      trEl2.appendChild(tdElToMap);
+      tdElToMap.innerHTML = `${matchedOffers[i].fromLocation} ${matchedOffers[i].toLocation}`;
     }
   }
   else {
@@ -100,6 +98,14 @@ function showOffers() {
     pEl.id = 'opsMessage';
     pEl.textContent = 'Ops! No rides available in your region';
   }
+
+  let aEl = document.createElement('a');
+  sectionEl.appendChild(aEl);
+  let buttonEl = document.createElement('button');
+  aEl.appendChild(buttonEl);
+  buttonEl.id = 'findAgain';
+  buttonEl.textContent = 'Find Another Ride';
+  aEl.href = 'find.html';
 }
 
 

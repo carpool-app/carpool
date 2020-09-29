@@ -111,7 +111,7 @@ label{
     font-size: 30px;
     position: relative;
     left:730px;
-   
+    margin-left: -60px;
 }
 #findAgain:hover {
     box-shadow: 0 0 2px 1px #17AFA7;
@@ -191,8 +191,12 @@ table:first-of-type{
   
   .info{
       font-family: 'Lora', serif;
-      font-size: 30px;
-  
+      font-size: 30px;  
   }
 
- 
+  #opsMessage{
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 200px;
+  }

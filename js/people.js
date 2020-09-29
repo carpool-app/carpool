@@ -1,13 +1,15 @@
 
 function Rating(name, rate) {
   this.name = name;
-  this.rate = rate;
+  this.rate = Number(rate);
   this.starPath = `img/${rate}.png`;
   this.path = `img/${name}.jpg`;
   ratings.push(this);
   scores.push(rate);
+  scoresCount[Number(rate)-1] += 1;
 }
 
+scoresCount = [0, 0, 0, 0, 0];
 let ratings = [];
 let scores = [];
 new Rating('Khaled', 3);
@@ -63,10 +65,12 @@ getFromLocalStorage();
 render();
 
 function getAvg(scores) {
+  let sum = 0;
   for (let i = 0; i < scores.length; i++) {
-    var avg = (scores[i] / scores.length) * scores.length;
-
+    sum = sum+Number(scores[i]);
   }
+  let avg = sum/scores.length;
+  avg = (Math.round(avg * 100) / 100).toFixed(2);
   return avg;
 }
 
@@ -110,7 +114,8 @@ function handleRating(event) {
   let name = nameEl.value;
   console.log(name);
   console.log(event.target.id);
-  let newRating = new Rating(name, event.target.id);
+  let newRating = new Rating(name, Number(event.target.id));
+  console.log(Number(event.target.id));
   let ratingIndex = ratings.indexOf(newRating);
   ratings.splice(ratingIndex, 1);
   newRating.path = 'img/default.png';
@@ -118,7 +123,72 @@ function handleRating(event) {
   saveToLocalStorage(newRating);
   sectionEl.innerHTML = '';
   render();
+  let myCharEl = document.getElementById('myChart');
+  myCharEl.innerHTML = '';
+  let avgEl = document.getElementById('avg');
+  avgEl.textContent = '';
+  chart();
+  showAvg();
+ }
+function chart(){
+  var ctx = document.getElementById('myChart');
+
+var myChart = new Chart(ctx, {
+  type: 'horizontalBar',
+      data: {
+        labels: ['1.0', '2.0', '3.0', '4.0','5.0'],
+        datasets: [{
+            label: '# of rates',
+            data: scoresCount,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                'rgba(75, 192, 192, 0.5)',
+                'rgba(153, 102, 255, 0.5)',
+                'rgba(255, 159, 64, 0.5)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+             
+                ticks: {
+                    beginAtZero: true,
+                    fontSize: 50,
+                    defaultFontFamily: 'Helvetica'
+                }
+            }],
+            xAxes: [{
+             
+              ticks: {
+                  beginAtZero: true,
+                  fontSize: 50,
+                  defaultFontFamily: 'Helvetica'
+              }
+          }]
+        }
+    }
+});
 }
+function showAvg(){
+let sectionEl = document. getElementById('avg');
+sectionEl.textContent = getAvg(scores);
+}
+
+showAvg();
+chart();
+
 
 
 // function setDefaultImg(ratings) {

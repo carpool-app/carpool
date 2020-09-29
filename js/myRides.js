@@ -71,10 +71,11 @@ function renderMyRequests() {
     }
   }
   else {
+    requestsSectionEl.id = 'noRequests';
     requestsSectionEl.textContent = 'No Ride Requests to Show! ';
     let aElFind = document.createElement('a');
     requestsSectionEl.appendChild(aElFind);
-    aElFind.textContent = 'Find a Ride';
+    aElFind.innerHTML = `<br> Find a Ride`;
     aElFind.href = 'find.html';
   }
 }
@@ -129,10 +130,11 @@ function renderMyOffers() {
     }
   }
   else {
+    offersSectionEl.id = 'noOffers';
     offersSectionEl.textContent = 'No Ride Offers to Show! ';
     let aElOffer = document.createElement('a');
     offersSectionEl.appendChild(aElOffer);
-    aElOffer.textContent = 'Offer a Ride';
+    aElOffer.innerHTML = `<br>Offer a Ride`;
     aElOffer.href = 'offer.html';
   }
 }

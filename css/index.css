@@ -69,7 +69,6 @@ overflow: hidden;
 
 #hero {
     background-image: url('../img/carbool.png');
-    background-repeat: no-repeat;
     background-size: cover;
     font-size: 70px;
     height: 900px;

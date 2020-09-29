@@ -2,6 +2,8 @@
     margin-top: 150px;
 }
 
+input:focus { outline: none; }
+
 input[type=text], [type=number] , [type=email],[type=time], select {
     width:25%;
     padding: 12px 20px;

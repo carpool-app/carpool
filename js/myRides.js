@@ -4,6 +4,10 @@ let requestsSectionEl = document.getElementById('myRequests');
 let offersSectionEl = document.getElementById('myOffers');
 let tableElRequests = document.createElement('table');
 let tableElOffers = document.createElement('table');
+let h2ElR = document.createElement('h2');
+requestsSectionEl.appendChild(h2ElR);
+let h2ElO = document.createElement('h2');
+  offersSectionEl.appendChild(h2ElO);
 requestsSectionEl.appendChild(tableElRequests);
 offersSectionEl.appendChild(tableElOffers);
 let myRequestsLocalStorage = '';
@@ -29,6 +33,8 @@ function saveToLocalStorage(name, array) {
 
 function renderMyRequests() {
   if (myRequestsLocalStorage.length) {
+    h2ElR.textContent = 'My Requests';
+    h2ElR.id = 'requestsH';
     let thElRemove = document.createElement('th');
     tableElRequests.appendChild(thElRemove);
     for (let i = 0; i < myRequestsHeader.length; i++) {
@@ -82,6 +88,8 @@ function renderMyRequests() {
 
 function renderMyOffers() {
   if (myOffersLocalStorage.length) {
+    h2ElO.textContent = 'My Offers';
+    h2ElO.id = 'offersH';
     let thElRemove = document.createElement('th');
     tableElOffers.appendChild(thElRemove);
     for (let i = 0; i < myOffersHeader.length; i++) {

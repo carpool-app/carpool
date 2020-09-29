@@ -52,7 +52,9 @@ function matchRequestToOffer(request) {
   }
 }
 function clearFindForm() {
-   findForm.textContent = '';
+  findForm.textContent = '';
+  let imgEl=document.getElementById('main-img');
+  imgEl.src='';
   let mainEl = document.getElementsByTagName('main')[0];
   console.log(mainEl);
   mainEl.style.backgroundImage = "url('../img/map.png')";

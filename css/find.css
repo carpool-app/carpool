@@ -2,7 +2,7 @@
 
 
 #findFormSection{
-    margin-top: 150px;
+    margin-top: 200px;
     FONT-WEIGHT: 700; 
     width: 600px;
     margin-left: 860px;
@@ -64,6 +64,8 @@ input[type=text],[type=time], select {
   #main-img{
       float: left;
       width: 800px;
+      margin-top: 150px;
+
       
   }
   #gender{
@@ -118,7 +120,7 @@ label{
     background-color:  #17AFA7;
     color: #ffffff;
     transition-delay: 350ms;
-  }
+}
 #findResultsSection{
       padding-top: 100px;
       width: 100%;
@@ -160,13 +162,10 @@ table{
     border-radius: 25px;
     padding: 20px;
     opacity: 0.8;
-    
-  
   }
 table, th, tr{
       border: 1px solid black;
-      text-align: center;  
-        
+      text-align: center;    
   }
 td{
       font-size: 15px;
@@ -174,8 +173,7 @@ td{
       background-color: rgba(255,255,255,.9);
       opacity: .8;
       height: 160px; 
-      font-family: 'Lora', serif;
-      
+      font-family: 'Lora', serif; 
   }
   
   

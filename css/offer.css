@@ -30,7 +30,6 @@ input[type=text], [type=number] , [type=email],[type=time], select {
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     border-radius: 70px ;
-    align-items: center;
   }
 
   

@@ -1,6 +1,8 @@
 #offerFormSection{
-    margin-top: 50px;
+    margin-top: 150px;
 }
+
+input:focus { outline: none; }
 
 input[type=text], [type=number] , [type=email],[type=time], select {
     width:25%;
@@ -17,7 +19,7 @@ input[type=text], [type=number] , [type=email],[type=time], select {
   }
   
   button {
-    width:100%;
+    width:60%;
     background-color: #17AFA7;
     color: white;
     padding: 14px 20px;
@@ -25,10 +27,15 @@ input[type=text], [type=number] , [type=email],[type=time], select {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    border-radius: 70px ;
+    margin-left: 105px;
   }
+
   
   button:hover {
-    background-color: #2ead98;
+    background-color: #000000;
   }
   
   #offerFormSection {
@@ -39,7 +46,7 @@ input[type=text], [type=number] , [type=email],[type=time], select {
   }
 
   input:invalid {
-    border: 2px solid #8A8578;
+    border: 2px solid #ddd;
   }
   input:valid {
     border: 2px solid #5DA38B;
@@ -85,7 +92,7 @@ input[type=text], [type=number] , [type=email],[type=time], select {
   }
   #main-img{
       float: left;
-      padding-top: 250px;
+      padding-top: 280px;
       width: 800px;
       
   }
@@ -117,9 +124,37 @@ input[type=text], [type=number] , [type=email],[type=time], select {
     }
   fieldset{
     box-shadow: 5px 5px 30px #49bee2;
+    border-radius: 13px;
     }
     footer p{
       text-align: center;
     }
 
- 
+
+    #offerAgain{
+      padding: 6px 20px;
+      border: none;
+      border-radius: 70px;
+      background: #000000;
+      color: #FFF;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 30px;
+      position: relative;
+      width: 20%;
+      top: 50px;
+      left: 100px;
+    }
+
+    #offerAgain:hover{
+      background: #17AFA7;
+      box-shadow: 0 0 2px 1px rgb(19, 138, 132);
+      color: #ffffff;
+      transition-delay: 350ms;
+    }
+
+    #offerMessage{
+      font-family: 'Covered By Your Grace', cursive;
+      font-size: 50px;
+      padding-left: 100px;
+
+    }

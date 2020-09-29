@@ -7,6 +7,13 @@
     box-sizing: border-box;
 }
 
+
+
+html,
+body {
+  height: 100%;
+}
+
 nav {
     overflow: hidden;
   }
@@ -20,7 +27,7 @@ nav {
   }
   
   nav a:hover {
-    background-color: rgb(19, 138, 132);
+    background-color: #000000;
     color: white;
   }
 body{
@@ -33,7 +40,7 @@ header{
     width: 100%;    
     position: fixed;
     top: 0;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 #logo{
@@ -45,31 +52,6 @@ header{
     float: left;
 }
 
-span{
-	margin: 0 15px;
-	line-height: .7;
-	text-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
-    animation: span 3s ease-in infinite alternate;
-}
-
-.letter{
-	display: inline-flex;
-	height: 20px;
-	width: 20px;
-	/* border: 2.5px solid #FF1EAD; */
-	border: 5px solid rgb(255, 255, 255);
-	border-radius: 90px;
-	box-shadow:
-		0 0 2px rgba(0, 0, 0, .75),
-		inset 0 0 2px rgba(0, 0, 0, .45);
-
-	animation: letter 3s ease-in infinite alternate;
-}
-
-@keyframes letter {
-	0%,20%{ width: 27px; }
-	60%,100%{ width: 15vw; }
-}
 
 header nav{
     float: right;
@@ -112,9 +94,11 @@ h1{
     font-size: 30px;
 }
 main{
-    background-color: #ffffff;  
+    background-color: #ffffff; 
+    overflow: auto;
 }
 footer{
+    
     position: absolute;
     padding-top: 15px;
     background-color: rgba(255,255,255, 0.9);
@@ -130,9 +114,8 @@ footer p{
     font-size: 15px;
     padding-right: 10px;
     text-align: center;
-    padding-left: 700px;
+    padding-left: 500px;
     padding-top: 10px;
-    text-transform: uppercase;
 }
 
 footer ul{
@@ -149,4 +132,15 @@ footer ul li a img{
     float: right;
     padding-right: 5px;
     border-radius: 20px;
+<<<<<<< HEAD
+=======
+}
+
+#footerLogo{
+    float: left;
+    color: black;
+    padding-left: 20px;
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 30px;
+>>>>>>> 0c5ba7956b34d4c3a54ecd8d669727d25afbd2af
 }

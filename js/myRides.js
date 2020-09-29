@@ -141,7 +141,7 @@ function removeRequest() {
   const index = myRequestsLocalStorage.indexOf(toRemove);
   myRequestsLocalStorage.splice(index, 1);
   saveToLocalStorage('RideRequests', myRequestsLocalStorage);
-  clearTable();
+  clearTable(tableElRequests);
   renderMyRequests();
 }
 
@@ -149,11 +149,11 @@ function removeOffer() {
   const index = myOffersLocalStorage.indexOf(toRemove);
   myOffersLocalStorage.splice(index, 1);
   saveToLocalStorage('RideOffers', myOffersLocalStorage);
-  clearTable();
+  clearTable(tableElOffers);
   renderMyOffers();
 }
 
-function clearTable() {
-  tableEl.textContent = '';
+function clearTable(table) {
+  table.textContent = '';
 }
 render();

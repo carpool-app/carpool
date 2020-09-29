@@ -27,9 +27,10 @@
         </nav>
     </header>
     <main>
+        <img id="main-img" src="img/get_matched_2x.png" alt="">
         <section id="findFormSection">
             <form id="findForm">
-                <legend>Find a Ride</legend>
+                
                 <fieldset>
                     <p>
                         <label for="name">Name:</label>
@@ -85,8 +86,7 @@
                             <option value="Cash">Cash</option>
                             <option value="Credit">Credit Card</option>
                         </select>
-                    </p>
-                    <p>
+                   
                         <label>Driver:</label>
                         <select name="driverGender" id='driverGender' form="findForm" required>
                             <option value="None">Not specified</option>
@@ -98,9 +98,11 @@
                 <button type="submit" id="find">Find</button>
             </form>
         </section>
+        <section id='findResultsSection'></section>
 
     </main>
     <footer>
+        <h1 id="footerLogo">GOSHARE</h1>
         <p>Copyrights Reserved &copy; GOSHARE 2020</p>
         <ul>
             <li class="social"><a href="index.html"><img id="fb" src="img/fb-icon.png"></a></li>

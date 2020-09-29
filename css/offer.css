@@ -19,7 +19,7 @@ input[type=text], [type=number] , [type=email],[type=time], select {
   }
   
   button {
-    width:100%;
+    width:60%;
     background-color: #17AFA7;
     color: white;
     padding: 14px 20px;
@@ -27,9 +27,10 @@ input[type=text], [type=number] , [type=email],[type=time], select {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-family: 'Raleway', 'sans-serif';
+    font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     border-radius: 70px ;
+    align-items: center;
   }
 
   
@@ -132,7 +133,7 @@ input[type=text], [type=number] , [type=email],[type=time], select {
       border-radius: 70px;
       background: #000000;
       color: #FFF;
-    font-family: 'Raleway', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 30px;
       /* margin-left: 500px; */
       position: relative;

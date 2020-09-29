@@ -80,6 +80,9 @@ overflow: hidden;
     
   }
 
+  #discoverButton{
+      margin-left: 90px;
+  }
   button{
     border: none;
     border-radius: 70px;

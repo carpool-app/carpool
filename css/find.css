@@ -38,7 +38,7 @@ input[type=text],[type=time], select {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-family: 'Raleway', 'sans-serif';
+    font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     border-radius: 70px ;
     position: relative;
@@ -71,7 +71,7 @@ input[type=text],[type=time], select {
   #main-img{
       float: left;
       width: 800px;
-      margin-top: 150px;
+      margin-top: 80px;
 
       
   }

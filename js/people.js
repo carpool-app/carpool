@@ -51,6 +51,7 @@ function render() {
     var imgEl = document.createElement('img');
     tdEl1.appendChild(imgEl);
     imgEl.src = ratings[i].path;
+    imgEl.id='profileImg';
     let tdEl2 = document.createElement('td');
     trEl.appendChild(tdEl2);
     var imgEl2 = document.createElement('img');
@@ -89,9 +90,6 @@ function renderForm() {
     idCounter -= 1;
     iEl.className = 'star';
   }
-  var buttonEl = document.createElement('button');
-  formEl.appendChild(buttonEl);
-  buttonEl.textContent = 'Rate us';
 }
 renderForm();
 let star1El = document.getElementById('1');
@@ -123,9 +121,9 @@ function handleRating(event) {
 }
 
 
-function setDefaultImg(ratings) {
-  for (let i = 0; i < ratings.length; i++) {
-    ratings[i].path = '../img/default.png';
-  }
-  return (ratings);
-}
+// function setDefaultImg(ratings) {
+//   for (let i = 0; i < ratings.length; i++) {
+//     ratings[i].path = '../img/default.png';
+//   }
+//   return (ratings);
+// }

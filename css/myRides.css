@@ -56,11 +56,12 @@
 
 main{
     padding-bottom: 500px;
-}
+  }
 
 
 table {
     border-collapse: collapse;
+    width:500px;
   }
   
   th, td {

@@ -93,14 +93,17 @@ function renderForm() {
   var labelEl2 = document.createElement('label');
   formEl.appendChild(labelEl2);
   labelEl2.textContent = 'Comment';
+  labelEl2.id='commentLabel';
+  labelEl2.for='commentText';
   let commentText = document.createElement('textarea');
   formEl.appendChild(commentText);
   commentText.id = 'commentText';
   commentText.name = 'commentText';
   commentText.rows = '3';
-  commentText.cols = '50'; 
+  commentText.cols = '50';
   var pEl = document.createElement('p');
   formEl.appendChild(pEl);
+  pEl.id = 'stars';
   for (var i = 1; i < 6; i++) {
     var iEl = document.createElement('i');
     pEl.appendChild(iEl);

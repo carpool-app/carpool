@@ -1,22 +1,23 @@
 
-function Rating(name, rate) {
+function Rating(name, rate, comment) {
   this.name = name;
   this.rate = Number(rate);
   this.starPath = `img/${rate}.png`;
   this.path = `img/${name}.jpg`;
+  this.comment = comment;
   ratings.push(this);
   scores.push(rate);
-  scoresCount[Number(rate)-1] += 1;
+  scoresCount[Number(rate) - 1] += 1;
 }
 
-scoresCount = [0, 0, 0, 0, 0];
+let scoresCount = [0, 0, 0, 0, 0];
 let ratings = [];
 let scores = [];
-new Rating('Khaled', 3);
-new Rating('Mohammed', 4);
-new Rating('Omar', 5);
-new Rating('Ayat', 5);
-new Rating('Lana', 4);
+new Rating('Khaled', 3, 'Easy to use, and definitely the best price in the market, and LOTS OF RESPECT!');
+new Rating('Mohammed', 4, 'Such a great app, very reliable, nothing like other apps, a great way to meet new people and share daily rides with!');
+new Rating('Omar', 5, 'I like this app, very easy in catching passenger locations, and I recommend everyone to use it, GOSHARE for life! :D');
+new Rating('Ayat', 5, 'It is an awesome application, I had a hard time installing uber that wanted information about my facebook contacts, and it was so complicated. I really recommend using this app, you won\'t regret it!');
+new Rating('Lana', 4, 'Easy to use, quick to see where there are available rides, great it shows the cost of the trip. Overall, I love using this app, and I recommend every single one to use it :) ');
 let idCounter = 5;
 let sectionEl = document.getElementById('ratings');
 let existingLocalStorage = [];
@@ -24,7 +25,7 @@ let existingLocalStorage = [];
 function getFromLocalStorage() {
   existingLocalStorage = JSON.parse(localStorage.getItem('Rates')) || [];
   for (let i = 0; i < existingLocalStorage.length; i++) {
-    let addedRating = new Rating(existingLocalStorage[i].name, existingLocalStorage[i].rate);
+    let addedRating = new Rating(existingLocalStorage[i].name, existingLocalStorage[i].rate, existingLocalStorage[i].comment);
     for (let j = 0; j < ratings.length; j++) {
       if (ratings[j] === addedRating) {
         ratings[j].path = 'img/default.png';
@@ -53,12 +54,16 @@ function render() {
     var imgEl = document.createElement('img');
     tdEl1.appendChild(imgEl);
     imgEl.src = ratings[i].path;
-    imgEl.id='profileImg';
+    imgEl.id = 'profileImg';
     let tdEl2 = document.createElement('td');
     trEl.appendChild(tdEl2);
     var imgEl2 = document.createElement('img');
     tdEl2.appendChild(imgEl2);
     imgEl2.src = ratings[i].starPath;
+    let tdEl3 = document.createElement('td');
+    trEl.appendChild(tdEl3);
+    tdEl3.id = 'comment';
+    tdEl3.textContent = ratings[i].comment;
   }
 }
 getFromLocalStorage();
@@ -67,9 +72,9 @@ render();
 function getAvg(scores) {
   let sum = 0;
   for (let i = 0; i < scores.length; i++) {
-    sum = sum+Number(scores[i]);
+    sum = sum + Number(scores[i]);
   }
-  let avg = sum/scores.length;
+  let avg = sum / scores.length;
   avg = (Math.round(avg * 100) / 100).toFixed(2);
   return avg;
 }
@@ -85,6 +90,15 @@ function renderForm() {
   formEl.appendChild(inputEl);
   inputEl.type = 'text';
   inputEl.id = 'name';
+  var labelEl2 = document.createElement('label');
+  formEl.appendChild(labelEl2);
+  labelEl2.textContent = 'Comment';
+  let commentText = document.createElement('textarea');
+  formEl.appendChild(commentText);
+  commentText.id = 'commentText';
+  commentText.name = 'commentText';
+  commentText.rows = '3';
+  commentText.cols = '50'; 
   var pEl = document.createElement('p');
   formEl.appendChild(pEl);
   for (var i = 1; i < 6; i++) {
@@ -112,10 +126,10 @@ function handleRating(event) {
   event.preventDefault();
   let nameEl = document.getElementById('name');
   let name = nameEl.value;
-  console.log(name);
-  console.log(event.target.id);
-  let newRating = new Rating(name, Number(event.target.id));
-  console.log(Number(event.target.id));
+  let commentEl = document.getElementById('commentText');
+  let comment = commentEl.value;
+  console.log(comment);
+  let newRating = new Rating(name, Number(event.target.id), comment);
   let ratingIndex = ratings.indexOf(newRating);
   ratings.splice(ratingIndex, 1);
   newRating.path = 'img/default.png';
@@ -129,61 +143,64 @@ function handleRating(event) {
   avgEl.textContent = '';
   chart();
   showAvg();
- }
-function chart(){
+}
+function chart() {
   var ctx = document.getElementById('myChart');
 
-var myChart = new Chart(ctx, {
-  type: 'horizontalBar',
-      data: {
-        labels: ['1.0', '2.0', '3.0', '4.0','5.0'],
-        datasets: [{
-            label: '# of rates',
-            data: scoresCount,
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.5)',
-                'rgba(54, 162, 235, 0.5)',
-                'rgba(255, 206, 86, 0.5)',
-                'rgba(75, 192, 192, 0.5)',
-                'rgba(153, 102, 255, 0.5)',
-                'rgba(255, 159, 64, 0.5)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
+  var myChart = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+      labels: ['1.0', '2.0', '3.0', '4.0', '5.0'],
+      datasets: [{
+        label: '# of rates',
+        data: scoresCount,
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.5)',
+          'rgba(54, 162, 235, 0.5)',
+          'rgba(255, 206, 86, 0.5)',
+          'rgba(75, 192, 192, 0.5)',
+          'rgba(153, 102, 255, 0.5)',
+          'rgba(255, 159, 64, 0.5)'
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
+      }]
     },
     options: {
-        scales: {
-            yAxes: [{
-             
-                ticks: {
-                    beginAtZero: true,
-                    fontSize: 50,
-                    defaultFontFamily: 'Helvetica'
-                }
-            }],
-            xAxes: [{
-             
-              ticks: {
-                  beginAtZero: true,
-                  fontSize: 50,
-                  defaultFontFamily: 'Helvetica'
-              }
-          }]
-        }
+      scales: {
+        yAxes: [{
+
+          ticks: {
+            beginAtZero: true,
+            fontSize: 30,
+            fontColor: 'black',
+            fontWeight: 'bold',
+            defaultFontFamily: 'serif'
+          }
+        }],
+        xAxes: [{
+
+          ticks: {
+            beginAtZero: true,
+            fontSize: 30,
+            fontColor: 'black',
+            defaultFontFamily: 'serif'
+          }
+        }]
+      }
     }
-});
+  });
 }
-function showAvg(){
-let sectionEl = document. getElementById('avg');
-sectionEl.textContent = getAvg(scores);
+function showAvg() {
+  let sectionEl = document.getElementById('avg');
+  sectionEl.textContent = getAvg(scores);
 }
 
 showAvg();

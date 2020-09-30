@@ -86,3 +86,6 @@ div{
     display: inline;
 }
 
+#map{
+    opacity: 1;
+}

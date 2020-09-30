@@ -7,7 +7,7 @@ let tableElOffers = document.createElement('table');
 let h2ElR = document.createElement('h2');
 requestsSectionEl.appendChild(h2ElR);
 let h2ElO = document.createElement('h2');
-  offersSectionEl.appendChild(h2ElO);
+offersSectionEl.appendChild(h2ElO);
 requestsSectionEl.appendChild(tableElRequests);
 offersSectionEl.appendChild(tableElOffers);
 let myRequestsLocalStorage = '';

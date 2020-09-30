@@ -13,6 +13,7 @@ main{
   background-size: cover;
   background-repeat: no-repeat;
   height: 1000px;
+  overflow-x:hidden;
 }
 
 
@@ -20,10 +21,18 @@ main{
     float: left;
     width: 33.33%;
     padding: 5px;
-   font-family: 'Covered By Your Grace', cursive;
-   font-weight: bold;
-   font-size: 40px;
-   color: grey;
+  
+  }
+  h3{
+    font-family: 'Covered By Your Grace', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(82, 75, 75);
+    margin-left: 100px;
+  }
+  #mahmoud{
+    position: relative;
+    left: 650px;
   }
   
   /* Clear floats after image containers */

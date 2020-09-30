@@ -78,11 +78,10 @@ function getAvg(scores) {
   avg = (Math.round(avg * 100) / 100).toFixed(2);
   return avg;
 }
-
+var sectionEl2 = document.getElementById('formSection');
+var formEl = document.createElement('form');
+sectionEl2.appendChild(formEl);
 function renderForm() {
-  var sectionEl2 = document.getElementById('formSection');
-  var formEl = document.createElement('form');
-  sectionEl2.appendChild(formEl);
   var labelEl = document.createElement('label');
   formEl.appendChild(labelEl);
   labelEl.textContent = 'Name';
@@ -113,6 +112,7 @@ function renderForm() {
   }
 }
 renderForm();
+
 let star1El = document.getElementById('1');
 let star2El = document.getElementById('2');
 let star3El = document.getElementById('3');
@@ -146,6 +146,7 @@ function handleRating(event) {
   avgEl.textContent = '';
   chart();
   showAvg();
+  formEl.reset();
 }
 function chart() {
   var ctx = document.getElementById('myChart');

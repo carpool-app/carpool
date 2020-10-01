@@ -50,6 +50,7 @@ function renderMyRequests() {
       let imgElRemove = document.createElement('img');
       tdElRemove.appendChild(imgElRemove);
       imgElRemove.src = 'img/trash.jpg';
+      imgElRemove.id = i;
       toRemove = myRequestsLocalStorage[i];
       imgElRemove.addEventListener('click', removeRequest);
       imgElRemove.className = 'trash';
@@ -105,6 +106,7 @@ function renderMyOffers() {
       let imgElRemove = document.createElement('img');
       tdElRemove.appendChild(imgElRemove);
       imgElRemove.src = 'img/trash.jpg';
+      imgElRemove.id = i;
       toRemove = myOffersLocalStorage[i];
       imgElRemove.addEventListener('click', removeOffer);
       imgElRemove.className = 'trash';
@@ -147,17 +149,17 @@ function renderMyOffers() {
   }
 }
 
-function removeRequest() {
+function removeRequest(event) {
   const index = myRequestsLocalStorage.indexOf(toRemove);
-  myRequestsLocalStorage.splice(index, 1);
+  myRequestsLocalStorage.splice(event.target.id, 1);
   saveToLocalStorage('RideRequests', myRequestsLocalStorage);
   clearTable(tableElRequests);
   renderMyRequests();
 }
 
-function removeOffer() {
+function removeOffer(event) {
   const index = myOffersLocalStorage.indexOf(toRemove);
-  myOffersLocalStorage.splice(index, 1);
+  myOffersLocalStorage.splice(event.target.id, 1);
   saveToLocalStorage('RideOffers', myOffersLocalStorage);
   clearTable(tableElOffers);
   renderMyOffers();

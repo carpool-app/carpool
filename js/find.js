@@ -57,7 +57,7 @@ function clearFindForm() {
   imgEl.src = '';
   let mainEl = document.getElementsByTagName('main')[0];
   console.log(mainEl);
-  mainEl.style.backgroundImage = "url('../img/map.png')";
+  mainEl.style.backgroundImage = "url('img/map.png')";
   mainEl.style.paddingBottom = '500px';
 }
 
@@ -111,7 +111,7 @@ function showOffers() {
 
 function setDefaultImg(offers) {
   for (let i = 0; i < offers.length; i++) {
-    offers[i].path = '../img/default.png';
+    offers[i].path = 'img/default.png';
   }
   return (offers);
 }

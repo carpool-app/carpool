@@ -49,7 +49,7 @@ function renderMyRequests() {
       trEl.appendChild(tdElRemove);
       let imgElRemove = document.createElement('img');
       tdElRemove.appendChild(imgElRemove);
-      imgElRemove.src = '../img/trash.jpg';
+      imgElRemove.src = 'img/trash.jpg';
       toRemove = myRequestsLocalStorage[i];
       imgElRemove.addEventListener('click', removeRequest);
       imgElRemove.className = 'trash';
@@ -104,7 +104,7 @@ function renderMyOffers() {
       trEl.appendChild(tdElRemove);
       let imgElRemove = document.createElement('img');
       tdElRemove.appendChild(imgElRemove);
-      imgElRemove.src = '../img/trash.jpg';
+      imgElRemove.src = 'img/trash.jpg';
       toRemove = myOffersLocalStorage[i];
       imgElRemove.addEventListener('click', removeOffer);
       imgElRemove.className = 'trash';
